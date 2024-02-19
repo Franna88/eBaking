@@ -1,4 +1,11 @@
+import 'package:ebaking/AboutUS.dart';
+import 'package:ebaking/CareerPath.dart';
+import 'package:ebaking/CourseInfo.dart';
+import 'package:ebaking/components/NavBar.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
+import 'package:ebaking/components/ContactInfo.dart';
+import 'package:ebaking/landingPage.dart';
+import 'package:ebaking/page2.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
@@ -13,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      home: Material(
+        type: MaterialType.transparency,
+        child: CourseInformation(),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
