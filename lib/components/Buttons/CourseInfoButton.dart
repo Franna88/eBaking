@@ -1,3 +1,4 @@
+import 'package:ebaking/components/MyUtil.dart';
 import 'package:flutter/material.dart';
 
 class CourseInfoButton extends StatelessWidget {
@@ -15,8 +16,12 @@ class CourseInfoButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.65,
-      width: 300,
+      height: MyUtility(context).width < 600
+          ? MyUtility(context).height * 0.6
+          : MediaQuery.of(context).size.height * 0.65,
+      width: MyUtility(context).width < 600
+          ? MyUtility(context).width / 1.2
+          : MyUtility(context).width / 5.2,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 255, 136, 40),
         borderRadius: BorderRadius.circular(10),
@@ -124,7 +129,9 @@ class _GradientButtonState extends State<GradientButton>
       child: GestureDetector(
         onTap: widget.onPressed,
         child: Container(
-          width: 125,
+          width: MyUtility(context).width > 600
+              ? MyUtility(context).width / 10
+              : MyUtility(context).width / 1.7,
           height: 40,
           decoration: BoxDecoration(
             gradient: LinearGradient(

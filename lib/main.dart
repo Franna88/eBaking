@@ -1,6 +1,7 @@
 import 'package:ebaking/AboutUS.dart';
 import 'package:ebaking/CareerPath.dart';
 import 'package:ebaking/CourseInfo.dart';
+import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
 import 'package:ebaking/components/ContactInfo.dart';

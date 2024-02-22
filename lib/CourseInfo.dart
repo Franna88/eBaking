@@ -29,6 +29,18 @@ final List courselist = [
     'title': 'Chain Store Retail Bakeries',
     'description':
         'Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum'
+  },
+  {
+    'imagePath': 'imges/Rectangle 161.png',
+    'title': 'Wholesale Bakeries',
+    'description':
+        'Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum'
+  },
+  {
+    'imagePath': 'imges/Rectangle 163.png',
+    'title': 'Plant Baking',
+    'description':
+        'Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum'
   }
 ];
 
@@ -126,14 +138,52 @@ class _CourseInformationState extends State<CourseInformation> {
                       ),
                     ],
                   ),
-                  if (MyUtility(context).width >= 600)
-                    Text(
-                      'What you will learn',
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 78, 47, 39)),
+                  Visibility(
+                    visible: MyUtility(context).width <= 600,
+                    child: CourseInfo(
+                        imagePath: 'imges/info.svg',
+                        title: '',
+                        description:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ialiquip ex ea Excepteur sint occaecat cupidatat non pro deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum'),
+                  ),
+                  Visibility(
+                    visible: MyUtility(context).width <= 600,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 40),
+                      child: Container(
+                        width: 400,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 217, 217, 217),
+                        ),
+                        child: Center(
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: SvgPicture.asset(
+                                'imges/Polygon 13.svg',
+                                width:
+                                    50, // Adjust the width and height of the SVG image
+                                height: 50,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
+                  ),
+                  Text(
+                    'What you will learn',
+                    style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color.fromARGB(255, 78, 47, 39)),
+                  ),
                   /*Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -160,14 +210,17 @@ class _CourseInformationState extends State<CourseInformation> {
                   Visibility(
                       visible: MyUtility(context).width <= 600,
                       child: CourseInfoMobileSlider(courselist: courselist)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CourseDot(),
-                      CourseDot(),
-                      CourseDot(),
-                      CourseDot(),
-                    ],
+                  Visibility(
+                    visible: MyUtility(context).width >= 600,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CourseDot(),
+                        CourseDot(),
+                        CourseDot(),
+                        CourseDot(),
+                      ],
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -183,35 +236,78 @@ class _CourseInformationState extends State<CourseInformation> {
                                   fontSize: 24, fontWeight: FontWeight.bold),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
-                            child: Row(
-                              children: [
-                                GradientButton(
-                                    text: 'Beginner',
-                                    startColor:
-                                        const Color.fromARGB(255, 225, 145, 77),
-                                    endColor:
-                                        const Color.fromARGB(255, 225, 222, 89),
-                                    duration: Duration(seconds: 1),
-                                    onPressed: () {}),
-                                GradientButton(
-                                    text: 'Advanced',
-                                    startColor:
-                                        const Color.fromARGB(255, 233, 107, 70),
-                                    endColor:
-                                        const Color.fromARGB(255, 233, 107, 70),
-                                    duration: Duration(seconds: 1),
-                                    onPressed: () {}),
-                                GradientButton(
-                                    text: 'Expert',
-                                    startColor:
-                                        const Color.fromARGB(255, 233, 107, 70),
-                                    endColor:
-                                        const Color.fromARGB(255, 233, 107, 70),
-                                    duration: Duration(seconds: 1),
-                                    onPressed: () {}),
-                              ],
+                          Visibility(
+                            visible: MyUtility(context).width > 600,
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 20),
+                              child: Row(
+                                children: [
+                                  GradientButton(
+                                      text: 'Beginner',
+                                      startColor: const Color.fromARGB(
+                                          255, 225, 145, 77),
+                                      endColor: const Color.fromARGB(
+                                          255, 225, 222, 89),
+                                      duration: Duration(seconds: 1),
+                                      onPressed: () {}),
+                                  GradientButton(
+                                      text: 'Advanced',
+                                      startColor: const Color.fromARGB(
+                                          255, 233, 107, 70),
+                                      endColor: const Color.fromARGB(
+                                          255, 233, 107, 70),
+                                      duration: Duration(seconds: 1),
+                                      onPressed: () {}),
+                                  GradientButton(
+                                      text: 'Expert',
+                                      startColor: const Color.fromARGB(
+                                          255, 233, 107, 70),
+                                      endColor: const Color.fromARGB(
+                                          255, 233, 107, 70),
+                                      duration: Duration(seconds: 1),
+                                      onPressed: () {}),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: MyUtility(context).width < 600,
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 20),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20),
+                                    child: GradientButton(
+                                        text: 'Beginner',
+                                        startColor: const Color.fromARGB(
+                                            255, 225, 145, 77),
+                                        endColor: const Color.fromARGB(
+                                            255, 225, 222, 89),
+                                        duration: Duration(seconds: 1),
+                                        onPressed: () {}),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20),
+                                    child: GradientButton(
+                                        text: 'Advanced',
+                                        startColor: const Color.fromARGB(
+                                            255, 233, 107, 70),
+                                        endColor: const Color.fromARGB(
+                                            255, 233, 107, 70),
+                                        duration: Duration(seconds: 1),
+                                        onPressed: () {}),
+                                  ),
+                                  GradientButton(
+                                      text: 'Expert',
+                                      startColor: const Color.fromARGB(
+                                          255, 233, 107, 70),
+                                      endColor: const Color.fromARGB(
+                                          255, 233, 107, 70),
+                                      duration: Duration(seconds: 1),
+                                      onPressed: () {}),
+                                ],
+                              ),
                             ),
                           ),
                           Padding(
@@ -248,29 +344,28 @@ class _CourseInformationState extends State<CourseInformation> {
                               onPressed: () {})
                         ],
                       ),
-                      Container(
-                        width: 400,
-                        height: 250,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 217, 217, 217),
-                        ),
-                        child: Center(
-                          child: Container(
-                            width:
-                                100, // Width and height of the circular container
-                            height: 100,
-                            decoration: BoxDecoration(
-                              shape: BoxShape
-                                  .circle, // Make the container circular
-                              color: Colors
-                                  .black, // Background color of the circular container
-                            ),
-                            child: Center(
-                              child: SvgPicture.asset(
-                                'imges/Polygon 13.svg',
-                                width:
-                                    50, // Adjust the width and height of the SVG image
-                                height: 50,
+                      Visibility(
+                        visible: MyUtility(context).width >= 600,
+                        child: Container(
+                          width: 400,
+                          height: 250,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 217, 217, 217),
+                          ),
+                          child: Center(
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.black,
+                              ),
+                              child: Center(
+                                child: SvgPicture.asset(
+                                  'imges/Polygon 13.svg',
+                                  width: 50,
+                                  height: 50,
+                                ),
                               ),
                             ),
                           ),

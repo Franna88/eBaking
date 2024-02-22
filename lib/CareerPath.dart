@@ -1,4 +1,6 @@
+import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/Buttons/CareerpathButton.dart';
+import 'package:ebaking/components/CareerPathMobileSlider.dart';
 import 'package:ebaking/components/ContactInfo.dart';
 import 'package:ebaking/components/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
@@ -6,6 +8,34 @@ import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';
 
 import 'components/MyUtil.dart';
+
+final List courselist = [
+  {
+    'imageUrl': 'imges/bread.jpg',
+    'text': 'History of Baking',
+    'onPressed': () {} // or 'onPressed': null
+  },
+  {
+    'imageUrl': 'imges/Baker.jpg',
+    'text': 'The SA baking Industry',
+    'onPressed': () {} // or 'onPressed': null
+  },
+  {
+    'imageUrl': 'imges/flowersprinkle.jpg',
+    'text': 'Types of Bakery',
+    'onPressed': () {} // or 'onPressed': null
+  },
+  {
+    'imageUrl': 'imges/nuts.jpg',
+    'text': 'New Concepts',
+    'onPressed': () {} // or 'onPressed': null
+  },
+  {
+    'imageUrl': 'imges/windowbread.jpg',
+    'text': 'SA Bakers Association',
+    'onPressed': () {} // or 'onPressed': null
+  }
+];
 
 class CareerPath extends StatefulWidget {
   const CareerPath({super.key});
@@ -103,6 +133,13 @@ class _CareerPathState extends State<CareerPath> {
                       ),
                     ],
                   ),
+                  Visibility(
+                      visible: MyUtility(context).width < 600,
+                      child: CourseInfo(
+                          imagePath: 'imges/info.svg',
+                          title: '',
+                          description:
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ialiquip ex ea Excepteur sint occaecat cupidatat non pro deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum')),
                   if (MyUtility(context).width >= 600)
                     Text(
                       'Learning with E - Baking',
@@ -326,14 +363,12 @@ class _CareerPathState extends State<CareerPath> {
                         ],
                       ),
                     ),
-                  if (MyUtility(context).width <= 600)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 25),
-                      child: CareerButton(
-                          text: 'History of Baking',
-                          imageUrl: 'imges/bread.jpg',
-                          onPressed: () {}),
-                    ),
+                  Visibility(
+                    visible: MyUtility(context).width <= 600,
+                    child: Padding(
+                        padding: const EdgeInsets.only(bottom: 25),
+                        child: CareerPathMobileSlider(courselist: courselist)),
+                  ),
                 ],
               ),
             ),
