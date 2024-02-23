@@ -36,7 +36,7 @@ class MyTextField extends StatelessWidget {
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: const Color.fromARGB(255, 78, 47, 39),
-                    fontFamily: "RegularMontserratBold",
+                    fontFamily: 'Monser2',
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -46,7 +46,7 @@ class MyTextField extends StatelessWidget {
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: Colors.red,
-                    fontFamily: "RegularMontserratBold",
+                    fontFamily: 'Monser2',
                   ),
                 )
               ],
@@ -66,7 +66,7 @@ class MyTextField extends StatelessWidget {
                   hintStyle: TextStyle(
                     color: Colors.grey,
                     fontSize: 20,
-                    fontFamily: "RegularMontserratBold",
+                    fontFamily: 'Monser',
                   ),
                 ),
                 validator: (value) {},

@@ -37,6 +37,7 @@ class CourseInfoButton extends StatelessWidget {
               title,
               style: TextStyle(
                 fontSize: 16,
+                fontFamily: 'Monser',
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -46,7 +47,11 @@ class CourseInfoButton extends StatelessWidget {
             width: 250,
             child: Text(
               description,
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+                fontFamily: 'Monser2',
+              ),
             ),
           ),
         ],
@@ -150,6 +155,7 @@ class _GradientButtonState extends State<GradientButton>
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14.0,
+                fontFamily: 'Monser2',
                 fontWeight: FontWeight.bold,
               ),
             ),

@@ -26,6 +26,7 @@ class ContactInfoMobile extends StatelessWidget {
                   'E-baking',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Monser',
                     fontSize: 24,
                   ),
                 ),
@@ -40,12 +41,14 @@ class ContactInfoMobile extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
+                    fontFamily: 'Monser',
                     fontWeight: FontWeight.w200),
               ),
               Text(
                 '+271 584 9574',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Monser2',
                   fontSize: 18,
                 ),
               ),
@@ -53,6 +56,7 @@ class ContactInfoMobile extends StatelessWidget {
                 'ebake@gmail.com',
                 style: TextStyle(
                   color: Colors.white,
+                  fontFamily: 'Monser2',
                   fontSize: 18,
                 ),
               ),
@@ -67,6 +71,7 @@ class ContactInfoMobile extends StatelessWidget {
                   'Follow Us',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Monser',
                     fontSize: 24,
                   ),
                 ),

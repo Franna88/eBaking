@@ -88,6 +88,7 @@ class _CareerPathState extends State<CareerPath> {
                               'Your Career starts here',
                               style: TextStyle(
                                 fontSize: 32,
+                                fontFamily: 'Monser',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -102,6 +103,7 @@ class _CareerPathState extends State<CareerPath> {
                               'Our Courses',
                               style: TextStyle(
                                 fontSize: 32,
+                                fontFamily: 'Monser',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -124,6 +126,7 @@ class _CareerPathState extends State<CareerPath> {
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.white,
+                                    fontFamily: 'Monser2',
                                   ),
                                   textAlign: TextAlign.left,
                                 ),
@@ -146,6 +149,7 @@ class _CareerPathState extends State<CareerPath> {
                       style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'Monser',
                           color: const Color.fromARGB(255, 78, 47, 39)),
                     ),
                   if (MyUtility(context).width >= 600)
@@ -167,6 +171,7 @@ class _CareerPathState extends State<CareerPath> {
                             'The Baking Industry: Part1',
                             style: TextStyle(
                                 fontSize: 20,
+                                fontFamily: 'Monser',
                                 fontWeight: FontWeight.w700,
                                 color: const Color.fromARGB(255, 78, 47, 39)),
                           ),

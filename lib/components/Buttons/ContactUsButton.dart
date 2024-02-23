@@ -53,11 +53,19 @@ class ContactsUsButton extends StatelessWidget {
           ),
           Text(
             label,
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+              fontFamily: 'Monser2',
+            ),
           ),
           Text(
             email,
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+              fontFamily: 'Monser2',
+            ),
           )
         ],
       ),

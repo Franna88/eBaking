@@ -1,5 +1,6 @@
 import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/ContactInfo.dart';
+import 'package:ebaking/components/MyUtil.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +55,7 @@ class _LandingPageState extends State<LandingPage> {
                         width: 1000,
                         child: ScrollNavBar()),
                   SizedBox(
-                    height: heightDevice / 8,
+                    height: MyUtility(context).height / 5,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
@@ -62,6 +63,7 @@ class _LandingPageState extends State<LandingPage> {
                       'Baking with love.',
                       style: TextStyle(
                         fontSize: 18,
+                        fontFamily: 'Monser2',
                         fontWeight: FontWeight.w100,
                         color: Colors.white,
                       ),
@@ -76,6 +78,7 @@ class _LandingPageState extends State<LandingPage> {
                       'Savoring every crumb of bakery bliss.',
                       style: TextStyle(
                         fontSize: 32,
+                        fontFamily: 'Monser',
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),

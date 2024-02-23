@@ -59,6 +59,7 @@ class AboutUsButton extends StatelessWidget {
               title,
               style: TextStyle(
                 fontSize: 24,
+                fontFamily: 'Monser',
                 fontWeight: FontWeight.bold,
                 color: const Color.fromARGB(255, 78, 47, 39),
               ),
@@ -68,7 +69,10 @@ class AboutUsButton extends StatelessWidget {
               child: Text(
                 description,
                 style: TextStyle(
-                    fontSize: 16, color: const Color.fromARGB(255, 78, 47, 39)),
+                  fontSize: 16,
+                  color: const Color.fromARGB(255, 78, 47, 39),
+                  fontFamily: 'Monser2',
+                ),
                 textAlign: TextAlign.center,
               ),
             ),

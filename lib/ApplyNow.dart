@@ -2,7 +2,9 @@ import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/ContactInfo.dart';
 import 'package:ebaking/components/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
+import 'package:ebaking/components/MyTextField.dart';
 import 'package:ebaking/components/NavBar.dart';
+import 'package:ebaking/components/ProgressBarStage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,6 +18,8 @@ class ApplyNow extends StatefulWidget {
 }
 
 class _ApplyNowState extends State<ApplyNow> {
+  //Text edit controller
+  final TextEditingController dummyController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -65,6 +69,7 @@ class _ApplyNowState extends State<ApplyNow> {
                             Text(
                               'Apply Now',
                               style: TextStyle(
+                                fontFamily: 'Monser',
                                 fontSize: 32,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -84,6 +89,7 @@ class _ApplyNowState extends State<ApplyNow> {
                               child: Text(
                                 'Requirements',
                                 style: TextStyle(
+                                  fontFamily: "Monser2",
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
@@ -96,18 +102,22 @@ class _ApplyNowState extends State<ApplyNow> {
                                 height: 300,
                                 width: 850,
                                 child: Text(
-                                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum',
+                                  '17 years or older\nMust be in grade 12 or has finished school\nAn application form must be completed (Request Application Form)\nA main course recipe with a photo attached\nA short CV with a motivational letter attached',
                                   style: TextStyle(
                                       fontSize: 18,
                                       color: Colors.white,
+                                      fontFamily: 'Monser',
                                       fontWeight: FontWeight.w100),
-                                  textAlign: TextAlign.left,
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                           ],
                         ),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: MyUtility(context).height / 15,
                   ),
                   Visibility(
                     visible: MyUtility(context).width <= 600,
@@ -117,37 +127,186 @@ class _ApplyNowState extends State<ApplyNow> {
                         description:
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ialiquip ex ea Excepteur sint occaecat cupidatat non pro deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum'),
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          ProgressBarStage(
+                              imagePath: 'imges/progressionbar.svg', number: 1),
+                          Text('Course\nDetails'),
+                        ],
+                      ),
+                      Container(
+                        height: 2,
+                        width: MyUtility(context).width / 6,
+                        color: Color.fromARGB(255, 78, 47, 39),
+                      ),
+                      Column(
+                        children: [
+                          ProgressBarStage(
+                              imagePath: 'imges/progressionbarcolor.svg',
+                              number: 2),
+                          Text('Applicant\nDetails')
+                        ],
+                      ),
+                      Container(
+                        height: 2,
+                        width: MyUtility(context).width / 6,
+                        color: Color.fromARGB(255, 78, 47, 39),
+                      ),
+                      Column(
+                        children: [
+                          ProgressBarStage(
+                              imagePath: 'imges/progressionbar.svg', number: 3),
+                          Text('Account\nHolder')
+                        ],
+                      )
+                    ],
+                  ),
+                  //Desktop Text Field
+                  Visibility(
+                    visible: MyUtility(context).width >= 600,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            MyTextField(
+                                description: 'Name',
+                                hintText: 'Name*',
+                                controller: dummyController),
+                            MyTextField(
+                                description: 'Surname',
+                                hintText: 'Surname*',
+                                controller: dummyController),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            MyTextField(
+                                description: 'Phone',
+                                hintText: 'Number*',
+                                controller: dummyController),
+                            MyTextField(
+                                description: 'Email',
+                                hintText: 'Email*',
+                                controller: dummyController),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            MyTextField(
+                                description: 'DOB',
+                                hintText: 'DD/MM/YYYY*',
+                                controller: dummyController),
+                            MyTextField(
+                                description: 'ID',
+                                hintText: 'Number*',
+                                controller: dummyController),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 24, 24, 24),
+                              child: SizedBox(
+                                width: 150,
+                                height: 50,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.orange,
+                                    foregroundColor: Colors.white,
+                                  ),
+                                  child: Text(
+                                    'Next',
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      fontFamily: 'Monser',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: MyUtility(context).width / 10,
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: MyUtility(context).height / 10,
+                        )
+                      ],
+                    ),
+                  ),
                   Visibility(
                     visible: MyUtility(context).width <= 600,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 40),
-                      child: Container(
-                        width: 400,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 217, 217, 217),
-                        ),
-                        child: Center(
-                          child: Container(
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.black,
-                            ),
-                            child: Center(
-                              child: SvgPicture.asset(
-                                'imges/Polygon 13.svg',
-                                width:
-                                    50, // Adjust the width and height of the SVG image
-                                height: 50,
+                    child: Column(
+                      children: [
+                        MyTextField(
+                            description: 'Name',
+                            hintText: 'Name*',
+                            customSize: MyUtility(context).width / 1.27,
+                            controller: dummyController),
+                        MyTextField(
+                            description: 'Surname',
+                            hintText: 'Surname*',
+                            customSize: MyUtility(context).width / 1.27,
+                            controller: dummyController),
+                        MyTextField(
+                            description: 'Phone',
+                            hintText: 'Number*',
+                            customSize: MyUtility(context).width / 1.27,
+                            controller: dummyController),
+                        MyTextField(
+                            description: 'Email',
+                            hintText: 'Email*',
+                            customSize: MyUtility(context).width / 1.27,
+                            controller: dummyController),
+                        MyTextField(
+                            description: 'DOB',
+                            hintText: 'DD/MM/YYYY*',
+                            customSize: MyUtility(context).width / 1.27,
+                            controller: dummyController),
+                        MyTextField(
+                            description: 'ID',
+                            hintText: 'Number*',
+                            customSize: MyUtility(context).width / 1.27,
+                            controller: dummyController),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 24, 24, 24),
+                          child: SizedBox(
+                            width: 150,
+                            height: 50,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.orange,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: Text(
+                                'Next',
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontFamily: 'Monser',
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
+                        SizedBox(
+                          width: MyUtility(context).width / 10,
+                        ),
+                        SizedBox(
+                          height: MyUtility(context).height / 15,
+                        )
+                      ],
                     ),
-                  ),
+                  )
                 ],
               ),
             ),

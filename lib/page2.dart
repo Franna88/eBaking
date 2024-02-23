@@ -100,6 +100,7 @@ class _Page2State extends State<Page2> {
                     'We really love what we do',
                     style: TextStyle(
                         fontSize: 18,
+                        fontFamily: 'Monser2',
                         fontWeight: FontWeight.w100,
                         color: Colors.white),
                   ),
@@ -109,6 +110,7 @@ class _Page2State extends State<Page2> {
                       'A symphony of flavors, crafted with love and precision',
                       style: TextStyle(
                           fontSize: 26,
+                          fontFamily: 'Monser',
                           fontWeight: FontWeight.w100,
                           color: Colors.white),
                       textAlign: TextAlign.center,

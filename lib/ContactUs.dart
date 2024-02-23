@@ -6,7 +6,6 @@ import 'package:ebaking/components/MyTextField.dart';
 import 'package:ebaking/components/MyUtil.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ContactUs extends StatefulWidget {
   const ContactUs({super.key});
@@ -68,10 +67,11 @@ class _ContactUsState extends State<ContactUs> {
                                   : MyUtility(context).height / 5,
                             ),
                             Text(
-                              'Type of Bakery',
+                              'Contact Us',
                               style: TextStyle(
                                 fontSize: 32,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Monser2',
                                 color: Colors.white,
                               ),
                               textAlign: TextAlign.center,
@@ -79,10 +79,11 @@ class _ContactUsState extends State<ContactUs> {
                             Padding(
                               padding: const EdgeInsets.only(bottom: 20),
                               child: Text(
-                                'Description of Module:',
+                                'We would love to hear from you',
                                 style: TextStyle(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
+                                  fontFamily: 'Monser2',
                                   color: Colors.white,
                                 ),
                                 textAlign: TextAlign.center,
@@ -134,6 +135,7 @@ class _ContactUsState extends State<ContactUs> {
                           style: TextStyle(
                               fontSize: 26,
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'Monser',
                               color: const Color.fromARGB(255, 78, 47, 39)),
                           textAlign: TextAlign.left,
                         ),
@@ -170,6 +172,7 @@ class _ContactUsState extends State<ContactUs> {
                               color: const Color.fromARGB(255, 78, 47, 39)),
                           textAlign: TextAlign.left,
                         ),
+                        //mobile field text
                         MyTextField(
                             description: 'name ',
                             hintText: 'name*',
@@ -207,7 +210,13 @@ class _ContactUsState extends State<ContactUs> {
                                 backgroundColor: Colors.orange,
                                 foregroundColor: Colors.white,
                               ),
-                              child: Text('Submit'),
+                              child: Text(
+                                'Submit',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontFamily: 'Monser',
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -220,6 +229,7 @@ class _ContactUsState extends State<ContactUs> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        //Desktop field text
                         MyTextField(
                             description: 'test',
                             hintText: 'name*',
@@ -261,7 +271,13 @@ class _ContactUsState extends State<ContactUs> {
                                 backgroundColor: Colors.orange,
                                 foregroundColor: Colors.white,
                               ),
-                              child: Text('Submit'),
+                              child: Text(
+                                'Submit',
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontFamily: 'Monser',
+                                ),
+                              ),
                             ),
                           ),
                         ),

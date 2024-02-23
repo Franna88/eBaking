@@ -102,6 +102,7 @@ class _CourseInformationState extends State<CourseInformation> {
                               'Type of Bakery',
                               style: TextStyle(
                                 fontSize: 32,
+                                fontFamily: 'Monser',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -121,6 +122,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                 'Description of Module:',
                                 style: TextStyle(
                                   fontSize: 24,
+                                  fontFamily: 'Monser',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -136,6 +138,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                   style: TextStyle(
                                       fontSize: 18,
                                       color: Colors.white,
+                                      fontFamily: 'Monser2',
                                       fontWeight: FontWeight.w100),
                                   textAlign: TextAlign.left,
                                 ),
@@ -174,8 +177,7 @@ class _CourseInformationState extends State<CourseInformation> {
                             child: Center(
                               child: SvgPicture.asset(
                                 'imges/Polygon 13.svg',
-                                width:
-                                    50, // Adjust the width and height of the SVG image
+                                width: 50,
                                 height: 50,
                               ),
                             ),
@@ -184,12 +186,16 @@ class _CourseInformationState extends State<CourseInformation> {
                       ),
                     ),
                   ),
-                  Text(
-                    'What you will learn',
-                    style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 78, 47, 39)),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+                    child: Text(
+                      'What you will learn',
+                      style: TextStyle(
+                          fontSize: 28,
+                          fontFamily: 'Monser',
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 78, 47, 39)),
+                    ),
                   ),
                   /*Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -354,7 +360,7 @@ class _CourseInformationState extends State<CourseInformation> {
                       Visibility(
                         visible: MyUtility(context).width >= 600,
                         child: Container(
-                          width: 400,
+                          width: MyUtility(context).width / 4,
                           height: 250,
                           decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 217, 217, 217),
