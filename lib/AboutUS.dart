@@ -21,7 +21,6 @@ class _AboutUsState extends State<AboutUs> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (width >= 600) ScrollNavBar(),
           if (width <= 600) MobileNavBar(),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
@@ -32,6 +31,9 @@ class _AboutUsState extends State<AboutUs> {
                 children: [
                   Stack(
                     children: [
+                      SizedBox(
+                        height: width < 600 ? 0 : 50,
+                      ),
                       ClipPath(
                         clipper: ClippingClass(),
                         child: Container(
@@ -45,6 +47,10 @@ class _AboutUsState extends State<AboutUs> {
                           ),
                         ),
                       ),
+                      if (width >= 600)
+                        ScrollNavBar(
+                          itemIndex: 1,
+                        ),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -97,6 +103,7 @@ class _AboutUsState extends State<AboutUs> {
                       'About Us',
                       style: TextStyle(
                           fontSize: 32,
+                          fontFamily: 'Monser',
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 78, 47, 39)),
                     ),

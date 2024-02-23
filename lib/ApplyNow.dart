@@ -57,7 +57,10 @@ class _ApplyNowState extends State<ApplyNow> {
                           ),
                         ],
                       ),
-                      if (width >= 600) ScrollNavBar(),
+                      if (width >= 600)
+                        ScrollNavBar(
+                          itemIndex: 4,
+                        ),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -134,7 +137,15 @@ class _ApplyNowState extends State<ApplyNow> {
                         children: [
                           ProgressBarStage(
                               imagePath: 'imges/progressionbar.svg', number: 1),
-                          Text('Course\nDetails'),
+                          Text(
+                            "Course\nDetails",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 78, 47, 39),
+                              fontFamily: 'Monser2',
+                            ),
+                          ),
                         ],
                       ),
                       Container(
@@ -147,7 +158,17 @@ class _ApplyNowState extends State<ApplyNow> {
                           ProgressBarStage(
                               imagePath: 'imges/progressionbarcolor.svg',
                               number: 2),
-                          Text('Applicant\nDetails')
+                          Text(
+                            "Course\nDetails",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 78, 47, 39),
+                              fontFamily: 'Monser2',
+                            ),
+                          ),
+
+                          //  Text('Applicant\nDetails')
                         ],
                       ),
                       Container(
@@ -159,7 +180,15 @@ class _ApplyNowState extends State<ApplyNow> {
                         children: [
                           ProgressBarStage(
                               imagePath: 'imges/progressionbar.svg', number: 3),
-                          Text('Account\nHolder')
+                          Text(
+                            "Account\nHolder",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 78, 47, 39),
+                              fontFamily: 'Monser2',
+                            ),
+                          ),
                         ],
                       )
                     ],

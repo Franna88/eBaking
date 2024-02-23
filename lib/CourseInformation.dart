@@ -72,7 +72,7 @@ class _CourseInformationState extends State<CourseInformation> {
                       Column(
                         children: [
                           SizedBox(
-                            height: width < 600 ? 0 : 50,
+                            height: width < 600 ? 0 : 85,
                           ),
                           ClipPath(
                             clipper: ClippingClass(),
@@ -89,7 +89,7 @@ class _CourseInformationState extends State<CourseInformation> {
                           ),
                         ],
                       ),
-                      if (width >= 600) ScrollNavBar(),
+                      if (width >= 600) ScrollNavBar(itemIndex: 2,),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -239,7 +239,8 @@ class _CourseInformationState extends State<CourseInformation> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(bottom: 20),
@@ -354,7 +355,10 @@ class _CourseInformationState extends State<CourseInformation> {
                               text: 'Apply',
                               startColor: Colors.yellow,
                               endColor: Colors.orange,
-                              onPressed: () {})
+                              onPressed: () {}),
+                          SizedBox(
+                            height: 25,
+                          )
                         ],
                       ),
                       Visibility(

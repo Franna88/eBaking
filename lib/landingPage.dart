@@ -51,9 +51,9 @@ class _LandingPageState extends State<LandingPage> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10.0),
                         ),
-                        height: 50,
-                        width: 1000,
-                        child: ScrollNavBar()),
+                        height: 80,
+                        width: widthDevice / 1.20,
+                        child: Center(child: ScrollNavBar(itemIndex: 0,))),
                   SizedBox(
                     height: MyUtility(context).height / 5,
                   ),

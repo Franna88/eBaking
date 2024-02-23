@@ -38,7 +38,7 @@ class _ContactUsState extends State<ContactUs> {
                       Column(
                         children: [
                           SizedBox(
-                            height: width < 600 ? 0 : 50,
+                            height: width < 600 ? 0 : 75,
                           ),
                           ClipPath(
                             clipper: ClippingClass(),
@@ -55,7 +55,10 @@ class _ContactUsState extends State<ContactUs> {
                           ),
                         ],
                       ),
-                      if (width >= 600) ScrollNavBar(),
+                      if (width >= 600)
+                        ScrollNavBar(
+                          itemIndex: 3,
+                        ),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,

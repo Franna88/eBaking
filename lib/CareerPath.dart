@@ -1,3 +1,4 @@
+import 'package:ebaking/CourseInformation.dart';
 import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/Buttons/CareerpathButton.dart';
 import 'package:ebaking/components/Sliders/CareerPathMobileSlider.dart';
@@ -49,6 +50,9 @@ class _CareerPathState extends State<CareerPath> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+
+    BuildContext? _dialogContext;
+
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -59,10 +63,13 @@ class _CareerPathState extends State<CareerPath> {
             child: Container(
               child: Column(
                 children: [
-                  if (width >= 600) ScrollNavBar(),
+               
                   if (width <= 600) MobileNavBar(),
                   Stack(
                     children: [
+                       SizedBox(
+                            height: width < 600 ? 0 : 50,
+                          ),
                       ClipPath(
                         clipper: ClippingClass(),
                         child: Container(
@@ -75,7 +82,7 @@ class _CareerPathState extends State<CareerPath> {
                             ),
                           ),
                         ),
-                      ),
+                      ),   if (width >= 600) ScrollNavBar(itemIndex: 2,),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -170,7 +177,7 @@ class _CareerPathState extends State<CareerPath> {
                           Text(
                             'The Baking Industry: Part1',
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 26,
                                 fontFamily: 'Monser',
                                 fontWeight: FontWeight.w700,
                                 color: const Color.fromARGB(255, 78, 47, 39)),
@@ -325,14 +332,26 @@ class _CareerPathState extends State<CareerPath> {
                               CareerButton(
                                   text: 'History of Baking',
                                   imageUrl: 'imges/bread.jpg',
-                                  onPressed: () {}),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Material(
+                                                child: CourseInformation())));
+                                  }),
                               SizedBox(
                                 height: MyUtility(context).height / 13,
                               ),
                               CareerButton(
                                   text: 'The SA baking Industry',
                                   imageUrl: 'imges/Baker.jpg',
-                                  onPressed: () {}),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Material(
+                                                child: CourseInformation())));
+                                  }),
                             ],
                           ),
                           Column(
@@ -340,14 +359,26 @@ class _CareerPathState extends State<CareerPath> {
                               CareerButton(
                                   text: 'Types of Bakery',
                                   imageUrl: 'imges/flowersprinkle.jpg',
-                                  onPressed: () {}),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Material(
+                                                child: CourseInformation())));
+                                  }),
                               SizedBox(
                                 height: MyUtility(context).height / 13,
                               ),
                               CareerButton(
                                   text: 'New Concepts',
                                   imageUrl: 'imges/nuts.jpg',
-                                  onPressed: () {}),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Material(
+                                                child: CourseInformation())));
+                                  }),
                             ],
                           ),
                           Column(
@@ -355,7 +386,13 @@ class _CareerPathState extends State<CareerPath> {
                               CareerButton(
                                   text: 'SA Bakers Association',
                                   imageUrl: 'imges/windowbread.jpg',
-                                  onPressed: () {}),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Material(
+                                                child: CourseInformation())));
+                                  }),
                               SizedBox(
                                 height: MyUtility(context).height / 13,
                               ),
