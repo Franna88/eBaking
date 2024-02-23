@@ -1,6 +1,6 @@
 import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/Buttons/CareerpathButton.dart';
-import 'package:ebaking/components/CareerPathMobileSlider.dart';
+import 'package:ebaking/components/Sliders/CareerPathMobileSlider.dart';
 import 'package:ebaking/components/ContactInfo.dart';
 import 'package:ebaking/components/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';

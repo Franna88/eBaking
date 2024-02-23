@@ -1,5 +1,7 @@
 import 'package:ebaking/AboutUS.dart';
+import 'package:ebaking/ApplyNow.dart';
 import 'package:ebaking/CareerPath.dart';
+import 'package:ebaking/ContactUs.dart';
 import 'package:ebaking/CourseInfo.dart';
 import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/NavBar.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: Material(
         type: MaterialType.transparency,
-        child: CourseInformation(),
+        child: ApplyNow(),
       ),
     );
   }

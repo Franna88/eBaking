@@ -2,8 +2,8 @@ import 'package:ebaking/components/Buttons/AboutUsButton.dart';
 import 'package:ebaking/components/Buttons/CourseInfoButton.dart';
 import 'package:ebaking/components/ContactInfo.dart';
 import 'package:ebaking/components/ContactInfroMobile.dart';
-import 'package:ebaking/components/CourseInfoDesktopSlider.dart';
-import 'package:ebaking/components/CourseInfoMobileSlider.dart';
+import 'package:ebaking/components/Sliders/CourseInfoDesktopSlider.dart';
+import 'package:ebaking/components/Sliders/CourseInfoMobileSlider.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';
@@ -59,6 +59,7 @@ class _CourseInformationState extends State<CourseInformation> {
     return SingleChildScrollView(
       child: Column(
         children: [
+          if (width <= 600) MobileNavBar(),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 224, 119, 15).withOpacity(0.15),
@@ -66,30 +67,36 @@ class _CourseInformationState extends State<CourseInformation> {
             child: Container(
               child: Column(
                 children: [
-                  if (width >= 600) ScrollNavBar(),
-                  if (width <= 600) MobileNavBar(),
                   Stack(
                     children: [
-                      ClipPath(
-                        clipper: ClippingClass(),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: width < 600 ? height / 3 : height / 1.1,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage("imges/flowersprinkle.jpg"),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: width < 600 ? 0 : 50,
+                          ),
+                          ClipPath(
+                            clipper: ClippingClass(),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: width < 600 ? height / 3 : height / 1.1,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage("imges/flowersprinkle.jpg"),
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
+                      if (width >= 600) ScrollNavBar(),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(
-                              height: 50,
+                              height: 100,
                             ),
                             Text(
                               'Type of Bakery',
