@@ -11,8 +11,23 @@ import 'package:ebaking/landingPage.dart';
 import 'package:ebaking/page2.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: "AIzaSyBCevcKY50o0wApb19i93TiEmq_RNXB-C0",
+            authDomain: "e-baking.firebaseapp.com",
+            projectId: "e-baking",
+            storageBucket: "e-baking.appspot.com",
+            messagingSenderId: "852581943258",
+            appId: "1:852581943258:web:5fab54ed387345676362e3"));
+  }
+  await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 

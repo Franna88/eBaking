@@ -21,7 +21,7 @@ class _AboutUsState extends State<AboutUs> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (width <= 600) MobileNavBar(),
+          if (width <= 600) MobileNavBar(itemIndex: 1,),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 224, 119, 15).withOpacity(0.15),

@@ -1,3 +1,4 @@
+import 'package:ebaking/Admin/LoginPage/adminloginPage.dart';
 import 'package:flutter/material.dart';
 
 class ContactInfo extends StatelessWidget {
@@ -17,10 +18,19 @@ class ContactInfo extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  child: Image.asset('imges/Logo.png'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Material(child: AdminLoginPage())));
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    child: Image.asset('imges/Logo.png'),
+                  ),
                 ),
                 Text(
                   'E-baking',

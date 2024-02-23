@@ -27,7 +27,7 @@ class _ApplyNowState extends State<ApplyNow> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (width <= 600) MobileNavBar(),
+          if (width <= 600) MobileNavBar(itemIndex: 4),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 224, 119, 15).withOpacity(0.15),
@@ -136,7 +136,7 @@ class _ApplyNowState extends State<ApplyNow> {
                       Column(
                         children: [
                           ProgressBarStage(
-                              imagePath: 'imges/progressionbar.svg', number: 1),
+                              imagePath: 'imges/normalCircle.png', number: 1),
                           Text(
                             "Course\nDetails",
                             style: TextStyle(
@@ -156,8 +156,7 @@ class _ApplyNowState extends State<ApplyNow> {
                       Column(
                         children: [
                           ProgressBarStage(
-                              imagePath: 'imges/progressionbarcolor.svg',
-                              number: 2),
+                              imagePath: 'imges/circleGradient.png', number: 2),
                           Text(
                             "Course\nDetails",
                             style: TextStyle(
@@ -179,7 +178,7 @@ class _ApplyNowState extends State<ApplyNow> {
                       Column(
                         children: [
                           ProgressBarStage(
-                              imagePath: 'imges/progressionbar.svg', number: 3),
+                              imagePath: 'imges/normalCircle.png', number: 3),
                           Text(
                             "Account\nHolder",
                             style: TextStyle(

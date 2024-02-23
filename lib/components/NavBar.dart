@@ -219,17 +219,32 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
 }
 
 class MobileNavBar extends StatelessWidget {
-  const MobileNavBar({super.key});
+  int itemIndex;
+  MobileNavBar({super.key, required this.itemIndex});
 
   @override
   Widget build(BuildContext context) {
     var heightDevice = MediaQuery.of(context).size.height;
     var widthDevice = MediaQuery.of(context).size.width;
+
+    BuildContext? _dialogContext;
+    //Open mobile navbar dialog
+    Future openMobileNavbarPopup() => showDialog(
+        context: context,
+        builder: (context) {
+          _dialogContext = context;
+          return Dialog(
+              child: MobileNavbarPopup(
+                  itemIndex: itemIndex,
+                  closeDialog: () => Navigator.pop(_dialogContext!)));
+        });
+
     return Column(
       children: [
         Container(
           height: 50,
           width: widthDevice,
+          color: Colors.white,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -240,7 +255,9 @@ class MobileNavBar extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  openMobileNavbarPopup();
+                },
                 child: SizedBox(
                   height: 40,
                   width: 40,
@@ -251,6 +268,126 @@ class MobileNavBar extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class MobileNavbarPopup extends StatefulWidget {
+  int itemIndex;
+
+  Function closeDialog;
+  MobileNavbarPopup(
+      {super.key, required this.closeDialog, required this.itemIndex});
+
+  @override
+  State<MobileNavbarPopup> createState() => _MobileNavbarPopupState();
+}
+
+class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
+  @override
+  Widget build(BuildContext context) {
+    var heightDevice = MediaQuery.of(context).size.height;
+    var widthDevice = MediaQuery.of(context).size.width;
+
+    return Container(
+      color: Colors.white,
+      width: widthDevice,
+      height: heightDevice,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            width: MyUtility(context).width / 4,
+            height: MyUtility(context).height / 6,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("imges/Logo.png"), fit: BoxFit.cover),
+            ),
+          ),
+          Padding(
+              padding: const EdgeInsets.fromLTRB(8, 0, 4, 0),
+              child: ContainerStyle(
+                description: "Home",
+                itemIndex: widget.itemIndex,
+                routeValue: 0,
+                route: LandingPage(),
+              )),
+          Padding(
+              padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+              child: ContainerStyle(
+                description: "About",
+                itemIndex: widget.itemIndex,
+                routeValue: 1,
+                route: AboutUs(),
+              )),
+          Padding(
+              padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+              child: ContainerStyle(
+                description: "View Courses",
+                itemIndex: widget.itemIndex,
+                routeValue: 2,
+                route: CareerPath(),
+              )),
+          Padding(
+              padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+              child: ContainerStyle(
+                description: "Contact Us",
+                itemIndex: widget.itemIndex,
+                routeValue: 3,
+                route: ContactUs(),
+              )),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Material(child: ApplyNow())));
+              },
+              child: Container(
+                width: 150,
+                height: 65,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("imges/applyBtn.png"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Apply',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'Monser',
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 0, 8, 0),
+            child: Container(
+              width: 150,
+              height: 40,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("imges/signInBtn.png"),
+                  fit: BoxFit.contain,
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                      fontSize: 20, fontFamily: 'Monser', color: Colors.white),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

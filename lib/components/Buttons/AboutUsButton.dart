@@ -130,10 +130,10 @@ class CourseInfo extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 50),
       child: Container(
         height: MyUtility(context).width < 600
-            ? MyUtility(context).height / 1.7
+            ? MyUtility(context).height / 1.5
             : MyUtility(context).height / 5.5,
         width: MyUtility(context).width < 600
-            ? MyUtility(context).width / 1.3
+            ? MyUtility(context).width - 50
             : MyUtility(context).width / 5.5,
         decoration: BoxDecoration(
           border: Border.all(

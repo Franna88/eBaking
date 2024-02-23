@@ -21,12 +21,17 @@ class ProgressBarStage extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          SvgPicture.asset(
-            imagePath,
-            width: 75,
-            height: 75,
-            fit: BoxFit.cover,
-          ),
+          Container(
+                          width: 75,
+                          height: 75,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("imges/imagePath.png"),
+                              fit: BoxFit.contain,
+                            ),
+                          ),),
+
+         
           Center(
             child: Text(
               '$number',

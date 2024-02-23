@@ -25,7 +25,7 @@ class _ContactUsState extends State<ContactUs> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (width <= 600) MobileNavBar(),
+          if (width <= 600) MobileNavBar(itemIndex: 3),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 224, 119, 15).withOpacity(0.15),

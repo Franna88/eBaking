@@ -59,7 +59,7 @@ class _CourseInformationState extends State<CourseInformation> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (width <= 600) MobileNavBar(),
+          if (width <= 600) MobileNavBar(itemIndex: 2),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 224, 119, 15).withOpacity(0.15),
@@ -72,7 +72,7 @@ class _CourseInformationState extends State<CourseInformation> {
                       Column(
                         children: [
                           SizedBox(
-                            height: width < 600 ? 0 : 85,
+                            height: width < 600 ? 0 : 250,
                           ),
                           ClipPath(
                             clipper: ClippingClass(),
@@ -89,7 +89,10 @@ class _CourseInformationState extends State<CourseInformation> {
                           ),
                         ],
                       ),
-                      if (width >= 600) ScrollNavBar(itemIndex: 2,),
+                      if (width >= 600)
+                        ScrollNavBar(
+                          itemIndex: 2,
+                        ),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,

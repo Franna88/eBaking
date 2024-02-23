@@ -7,6 +7,7 @@ import 'package:ebaking/components/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'components/MyUtil.dart';
 
@@ -63,13 +64,9 @@ class _CareerPathState extends State<CareerPath> {
             child: Container(
               child: Column(
                 children: [
-               
-                  if (width <= 600) MobileNavBar(),
+                  if (width <= 600) MobileNavBar(itemIndex: 2),
                   Stack(
                     children: [
-                       SizedBox(
-                            height: width < 600 ? 0 : 50,
-                          ),
                       ClipPath(
                         clipper: ClippingClass(),
                         child: Container(
@@ -77,12 +74,19 @@ class _CareerPathState extends State<CareerPath> {
                           height: width < 600 ? height / 3 : height / 1.1,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              fit: BoxFit.fill,
+                              fit: BoxFit.cover,
                               image: AssetImage("imges/CareerPathMain.jpg"),
                             ),
                           ),
                         ),
-                      ),   if (width >= 600) ScrollNavBar(itemIndex: 2,),
+                      ),
+                      SizedBox(
+                        height: width < 600 ? 0 : 85,
+                      ),
+                      if (width >= 600)
+                        ScrollNavBar(
+                          itemIndex: 2,
+                        ),
                       Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -172,7 +176,6 @@ class _CareerPathState extends State<CareerPath> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text(
                             'The Baking Industry: Part1',
@@ -182,10 +185,59 @@ class _CareerPathState extends State<CareerPath> {
                                 fontWeight: FontWeight.w700,
                                 color: const Color.fromARGB(255, 78, 47, 39)),
                           ),
-                          SizedBox(
-                            width: MyUtility(context).width / 8,
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                              width: 340,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  focusColor: Color(0xFF9E9E9E),
+                                  prefixIcon: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SvgPicture.asset(
+                                        "imges/magnifyingClass.svg",
+                                        width: 35,
+                                        height: 35),
+                                  ),
+                                  hintText: "Search here...",
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
-                          Container(
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                              width: 340,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  focusColor: Color(0xFF9E9E9E),
+                                  prefixIcon: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SvgPicture.asset(
+                                        "imges/category.svg",
+                                        width: 35,
+                                        height: 35),
+                                  ),
+                                  hintText: "Categories",
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          /*  Container(
                             width: MyUtility(context).width / 4.5,
                             height: MyUtility(context).height * 0.07,
                             decoration: BoxDecoration(
@@ -231,6 +283,7 @@ class _CareerPathState extends State<CareerPath> {
                               ),
                             ),
                           ),
+                      */
                         ],
                       ),
                     ),
@@ -269,7 +322,58 @@ class _CareerPathState extends State<CareerPath> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Container(
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  width: MyUtility(context).width / 2.5,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: Colors.white,
+                                      focusColor: Color(0xFF9E9E9E),
+                                      prefixIcon: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: SvgPicture.asset(
+                                            "imges/magnifyingClass.svg",
+                                            width: 35,
+                                            height: 35),
+                                      ),
+                                      hintText: "Search here...",
+                                      hintStyle: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  width: MyUtility(context).width / 2.5,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: Colors.white,
+                                      focusColor: Color(0xFF9E9E9E),
+                                      prefixIcon: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: SvgPicture.asset(
+                                            "imges/category.svg",
+                                            width: 35,
+                                            height: 35),
+                                      ),
+                                      hintText: "Categories",
+                                      hintStyle: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              /*Container(
                                 width: MyUtility(context).width / 2.5,
                                 height: MyUtility(context).height * 0.07,
                                 decoration: BoxDecoration(
@@ -315,6 +419,7 @@ class _CareerPathState extends State<CareerPath> {
                                   ),
                                 ),
                               ),
+                           */
                             ],
                           ),
                         ],

@@ -23,7 +23,7 @@ class _LandingPageState extends State<LandingPage> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (widthDevice <= 600) MobileNavBar(),
+          if (widthDevice <= 600) MobileNavBar(itemIndex: 0),
           ColorFiltered(
             colorFilter: ColorFilter.mode(
                 const Color.fromARGB(255, 224, 119, 15).withOpacity(0.15),
@@ -53,7 +53,10 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                         height: 80,
                         width: widthDevice / 1.20,
-                        child: Center(child: ScrollNavBar(itemIndex: 0,))),
+                        child: Center(
+                            child: ScrollNavBar(
+                          itemIndex: 0,
+                        ))),
                   SizedBox(
                     height: MyUtility(context).height / 5,
                   ),
