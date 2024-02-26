@@ -1,5 +1,5 @@
-import 'package:ebaking/components/ContactInfo.dart';
-import 'package:ebaking/components/ContactInfroMobile.dart';
+import 'package:ebaking/components/Footer/ContactInfo.dart';
+import 'package:ebaking/components/Footer/ContactInfroMobile.dart';
 import 'package:flutter/material.dart';
 
 class Page2 extends StatefulWidget {

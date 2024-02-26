@@ -1,15 +1,15 @@
-import 'package:ebaking/CourseInformation.dart';
-import 'package:ebaking/components/Buttons/AboutUsButton.dart';
-import 'package:ebaking/components/Buttons/CareerpathButton.dart';
-import 'package:ebaking/components/Sliders/CareerPathMobileSlider.dart';
-import 'package:ebaking/components/ContactInfo.dart';
-import 'package:ebaking/components/ContactInfroMobile.dart';
+import 'package:ebaking/carreerPath/courseInfo/CourseInformation.dart';
+import 'package:ebaking/AboutUs/AboutUsButton.dart';
+import 'package:ebaking/carreerPath/CareerpathButton.dart';
+import 'package:ebaking/carreerPath/CareerPathMobileSlider.dart';
+import 'package:ebaking/components/Footer/ContactInfo.dart';
+import 'package:ebaking/components/Footer/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'components/MyUtil.dart';
+import '../components/MyUtil.dart';
 
 final List courselist = [
   {

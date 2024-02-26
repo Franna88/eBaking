@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../MyUtil.dart';
+import '../components/MyUtil.dart';
 
 class CareerButton extends StatelessWidget {
   final String text;

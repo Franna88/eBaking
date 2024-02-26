@@ -1,6 +1,6 @@
-import 'package:ebaking/components/Buttons/ContactUsButton.dart';
-import 'package:ebaking/components/ContactInfo.dart';
-import 'package:ebaking/components/ContactInfroMobile.dart';
+import 'package:ebaking/ContactUs/ContactUsButton.dart';
+import 'package:ebaking/components/Footer/ContactInfo.dart';
+import 'package:ebaking/components/Footer/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
 import 'package:ebaking/components/MyTextField.dart';
 import 'package:ebaking/components/MyUtil.dart';

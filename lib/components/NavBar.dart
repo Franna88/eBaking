@@ -1,7 +1,7 @@
-import 'package:ebaking/AboutUS.dart';
+import 'package:ebaking/AboutUs/AboutUS.dart';
 import 'package:ebaking/ApplyNow.dart';
-import 'package:ebaking/CareerPath.dart';
-import 'package:ebaking/ContactUs.dart';
+import 'package:ebaking/carreerPath/CareerPath.dart';
+import 'package:ebaking/ContactUs/ContactUs.dart';
 import 'package:ebaking/landingPage.dart';
 import 'package:flutter/material.dart';
 

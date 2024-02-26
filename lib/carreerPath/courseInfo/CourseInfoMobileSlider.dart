@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ebaking/components/Buttons/CareerpathButton.dart';
+import 'package:ebaking/carreerPath/courseInfo/CourseInfoButton.dart';
 import 'package:flutter/material.dart';
 
 class Dots extends StatefulWidget {
@@ -30,19 +30,19 @@ class _DotsState extends State<Dots> {
   }
 }
 
-class CareerPathMobileSlider extends StatefulWidget {
+class CourseInfoMobileSlider extends StatefulWidget {
   List courselist;
 
-  CareerPathMobileSlider({
+  CourseInfoMobileSlider({
     super.key,
     required this.courselist,
   });
 
   @override
-  State<CareerPathMobileSlider> createState() => _CareerPathMobileSliderState();
+  State<CourseInfoMobileSlider> createState() => _CourseInfoMobileSliderState();
 }
 
-class _CareerPathMobileSliderState extends State<CareerPathMobileSlider> {
+class _CourseInfoMobileSliderState extends State<CourseInfoMobileSlider> {
   CarouselController buttonCarouselController = CarouselController();
   var imageCount = 0;
 
@@ -89,14 +89,14 @@ class _CareerPathMobileSliderState extends State<CareerPathMobileSlider> {
     return Column(children: [
       Center(
         child: CarouselSlider(
-          options:
-              CarouselOptions(height: heightDevice / 3.5, viewportFraction: 2),
+          options: CarouselOptions(
+              height: heightDevice / 2.5 + 130, viewportFraction: 2),
           carouselController: buttonCarouselController,
           items: (widget.courselist).map<Widget>((item) {
-            return CareerButton(
-              imageUrl: item['imageUrl'],
-              text: item['text'],
-              onPressed: item['onPress'] ?? () {},
+            return CourseInfoButton(
+              imagePath: item['imagePath'],
+              title: item['title'],
+              description: item['description'],
             );
           }).toList(),
         ),
@@ -115,7 +115,7 @@ class _CareerPathMobileSliderState extends State<CareerPathMobileSlider> {
             child: const Icon(
                 size: 45.0,
                 Icons.arrow_back_ios,
-                color: Color.fromARGB(255, 78, 47, 39)),
+                color: Color.fromARGB(241, 255, 136, 40)),
           ),
           for (var i = 0; i < widget.courselist!.length; i++)
             Padding(
@@ -135,7 +135,7 @@ class _CareerPathMobileSliderState extends State<CareerPathMobileSlider> {
             child: const Icon(
                 size: 45.0,
                 Icons.arrow_forward_ios,
-                color: Color.fromARGB(255, 78, 47, 39)),
+                color: Color.fromARGB(241, 255, 136, 40)),
           )
         ],
       ),

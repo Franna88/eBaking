@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../MyUtil.dart';
+import '../components/MyUtil.dart';
 
 class AboutUsButton extends StatelessWidget {
   final String imagePath;

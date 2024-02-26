@@ -1,5 +1,5 @@
-import 'package:ebaking/components/Buttons/AboutUsButton.dart';
-import 'package:ebaking/components/ContactInfo.dart';
+import 'package:ebaking/AboutUs/AboutUsButton.dart';
+import 'package:ebaking/components/Footer/ContactInfo.dart';
 import 'package:ebaking/components/MyUtil.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:flutter/material.dart';

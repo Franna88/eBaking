@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ebaking/components/Buttons/CourseInfoButton.dart';
+import 'package:ebaking/carreerPath/courseInfo/CourseInfoButton.dart';
 import 'package:ebaking/components/MyUtil.dart';
 import 'package:flutter/material.dart';
 /*CourseInfoButton(
