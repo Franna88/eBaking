@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(),
-        body: Center(
+        body: const Center(
           child: ContactsUsButton(
             imagePath: 'images/mail.svg',
             email: 'ebaking@gmail.com',
@@ -41,7 +43,7 @@ class ContactsUsButton extends StatelessWidget {
       height: 150,
       width: 200,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 255, 139, 47),
+        color: const Color.fromARGB(255, 255, 139, 47),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -53,7 +55,7 @@ class ContactsUsButton extends StatelessWidget {
           ),
           Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               color: Colors.white,
               fontFamily: 'Monser2',
@@ -61,7 +63,7 @@ class ContactsUsButton extends StatelessWidget {
           ),
           Text(
             email,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               color: Colors.white,
               fontFamily: 'Monser2',

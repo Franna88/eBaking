@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ebaking/carreerPath/CareerpathButton.dart';
+import 'package:ebaking/CarreerPath/CareerpathButton.dart';
 import 'package:flutter/material.dart';
 
 class Dots extends StatefulWidget {
@@ -19,9 +19,9 @@ class _DotsState extends State<Dots> {
       height: 15,
       decoration: ShapeDecoration(
         color: widget.dotSelected! == widget.imageSelected!
-            ? Color.fromARGB(241, 255, 136, 40)
+            ? const Color.fromARGB(241, 255, 136, 40)
             : Colors.white,
-        shape: OvalBorder(
+        shape: const OvalBorder(
           side:
               BorderSide(width: 1.50, color: Color.fromARGB(241, 255, 136, 40)),
         ),
@@ -117,7 +117,7 @@ class _CareerPathMobileSliderState extends State<CareerPathMobileSlider> {
                 Icons.arrow_back_ios,
                 color: Color.fromARGB(255, 78, 47, 39)),
           ),
-          for (var i = 0; i < widget.courselist!.length; i++)
+          for (var i = 0; i < widget.courselist.length; i++)
             Padding(
               padding: const EdgeInsets.all(2.0),
               child: Dots(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CourseService { 
   BuildContext context;
-  CourseService(this.context) : assert(context != null);
+  CourseService(this.context);
   
   BuildContext? _dialogContext;
 

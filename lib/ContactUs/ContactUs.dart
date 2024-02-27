@@ -45,7 +45,7 @@ class _ContactUsState extends State<ContactUs> {
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               height: width < 600 ? height / 3 : height / 1.75,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage("imges/Rectangle 195.png"),
@@ -69,7 +69,7 @@ class _ContactUsState extends State<ContactUs> {
                                   ? MyUtility(context).width / 5
                                   : MyUtility(context).height / 5,
                             ),
-                            Text(
+                            const Text(
                               'Contact Us',
                               style: TextStyle(
                                 fontSize: 32,
@@ -79,8 +79,8 @@ class _ContactUsState extends State<ContactUs> {
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 20),
+                            const Padding(
+                              padding: EdgeInsets.only(bottom: 20),
                               child: Text(
                                 'We would love to hear from you',
                                 style: TextStyle(
@@ -106,21 +106,21 @@ class _ContactUsState extends State<ContactUs> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ContactsUsButton(
+                        const ContactsUsButton(
                             imagePath: 'imges/mail.svg',
                             email: 'ebaking@gmail.com',
                             label: 'Email'),
                         SizedBox(
                           width: MyUtility(context).width * 0.02,
                         ),
-                        ContactsUsButton(
+                        const ContactsUsButton(
                             imagePath: 'imges/Phone.svg',
                             email: '+27 71 958 85 74',
                             label: 'Phone'),
                         SizedBox(
                           width: MyUtility(context).width * 0.02,
                         ),
-                        ContactsUsButton(
+                        const ContactsUsButton(
                             imagePath: 'imges/Whatsapp.svg',
                             email: '+27 71 958 85 74',
                             label: 'Whatsapp')
@@ -133,13 +133,13 @@ class _ContactUsState extends State<ContactUs> {
                       padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
                       child: SizedBox(
                         width: MyUtility(context).width / 1.29,
-                        child: Text(
+                        child: const Text(
                           'Get in Touch',
                           style: TextStyle(
                               fontSize: 26,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Monser',
-                              color: const Color.fromARGB(255, 78, 47, 39)),
+                              color: Color.fromARGB(255, 78, 47, 39)),
                           textAlign: TextAlign.left,
                         ),
                       ),
@@ -167,12 +167,12 @@ class _ContactUsState extends State<ContactUs> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text(
+                        const Text(
                           'Get in Touch',
                           style: TextStyle(
                               fontSize: 26,
                               fontWeight: FontWeight.bold,
-                              color: const Color.fromARGB(255, 78, 47, 39)),
+                              color: Color.fromARGB(255, 78, 47, 39)),
                           textAlign: TextAlign.left,
                         ),
                         //mobile field text
@@ -213,7 +213,7 @@ class _ContactUsState extends State<ContactUs> {
                                 backgroundColor: Colors.orange,
                                 foregroundColor: Colors.white,
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Submit',
                                 style: TextStyle(
                                   fontSize: 18,
@@ -274,7 +274,7 @@ class _ContactUsState extends State<ContactUs> {
                                 backgroundColor: Colors.orange,
                                 foregroundColor: Colors.white,
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Submit',
                                 style: TextStyle(
                                   fontSize: 22,
@@ -295,15 +295,15 @@ class _ContactUsState extends State<ContactUs> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ContactsUsButton(
+                        const ContactsUsButton(
                             imagePath: 'imges/mail.svg',
                             email: 'ebaking@gmail.com',
                             label: 'Email'),
                         SizedBox(
                           width: MyUtility(context).width * 0.02,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(0, 16, 0, 16),
                           child: ContactsUsButton(
                               imagePath: 'imges/Phone.svg',
                               email: '+27 71 958 85 74',
@@ -312,7 +312,7 @@ class _ContactUsState extends State<ContactUs> {
                         SizedBox(
                           width: MyUtility(context).width * 0.02,
                         ),
-                        ContactsUsButton(
+                        const ContactsUsButton(
                             imagePath: 'imges/Whatsapp.svg',
                             email: '+27 71 958 85 74',
                             label: 'Whatsapp'),
@@ -326,8 +326,8 @@ class _ContactUsState extends State<ContactUs> {
               ),
             ),
           ),
-          if (width >= 600) ContactInfo(),
-          if (width <= 600) ContactInfoMobile()
+          if (width >= 600) const ContactInfo(),
+          if (width <= 600) const ContactInfoMobile()
         ],
       ),
     );

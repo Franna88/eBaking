@@ -27,7 +27,7 @@ class _CoursesState extends State<Courses> {
         children: [
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   CourseService(context).openCourseDialog();
@@ -38,7 +38,7 @@ class _CoursesState extends State<Courses> {
                     decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 255, 115, 0),
                         borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Add New Course +",
                         style: TextStyle(
@@ -50,7 +50,7 @@ class _CoursesState extends State<Courses> {
               ),
             ],
           ),
-          Text(
+          const Text(
             'Learning with E - The Baking Industry',
             style: TextStyle(
               fontSize: 25,

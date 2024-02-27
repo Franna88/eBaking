@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ContactInfoMobile extends StatelessWidget {
-  const ContactInfoMobile({Key? key});
+  const ContactInfoMobile({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +19,12 @@ class ContactInfoMobile extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: 125,
                   height: 125,
                   child: Image.asset('imges/Logo.png'),
                 ),
-                Text(
+                const Text(
                   'E-baking',
                   style: TextStyle(
                     color: Colors.white,
@@ -33,7 +35,7 @@ class ContactInfoMobile extends StatelessWidget {
               ],
             ),
           ),
-          Column(
+          const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -67,7 +69,7 @@ class ContactInfoMobile extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Follow Us',
                   style: TextStyle(
                     color: Colors.white,

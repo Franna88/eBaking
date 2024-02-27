@@ -1,6 +1,5 @@
 
 import 'package:ebaking/Admin/Quiz/quizList.dart';
-import 'package:ebaking/components/MyUtil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -22,7 +21,7 @@ class _QuizState extends State<Quiz> {
         children: [
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
@@ -31,14 +30,14 @@ class _QuizState extends State<Quiz> {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      focusColor: Color(0xFF9E9E9E),
+                      focusColor: const Color(0xFF9E9E9E),
                       prefixIcon: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: SvgPicture.asset("imges/magnifyingClass.svg",
                             width: 35, height: 35),
                       ),
                       hintText: "Search here...",
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                         color: Colors.grey,
                         fontSize: 20,
                       ),
@@ -54,14 +53,14 @@ class _QuizState extends State<Quiz> {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      focusColor: Color(0xFF9E9E9E),
+                      focusColor: const Color(0xFF9E9E9E),
                       prefixIcon: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: SvgPicture.asset("imges/category.svg",
                             width: 35, height: 35),
                       ),
                       hintText: "Categories",
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                         color: Colors.grey,
                         fontSize: 20,
                       ),
@@ -75,7 +74,7 @@ class _QuizState extends State<Quiz> {
                   decoration: const BoxDecoration(
                       color: Color.fromARGB(255, 255, 115, 0),
                       borderRadius: BorderRadius.all(Radius.circular(10))),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Add New Question +",
                       style: TextStyle(
@@ -86,11 +85,11 @@ class _QuizState extends State<Quiz> {
                   )),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
             
-       QuizList()
+       const QuizList()
         ],
       ),
     );

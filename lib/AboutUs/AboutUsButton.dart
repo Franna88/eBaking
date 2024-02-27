@@ -57,20 +57,20 @@ class AboutUsButton extends StatelessWidget {
             ),
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 fontFamily: 'Monser',
                 fontWeight: FontWeight.bold,
-                color: const Color.fromARGB(255, 78, 47, 39),
+                color: Color.fromARGB(255, 78, 47, 39),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 8, 24),
               child: Text(
                 description,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
-                  color: const Color.fromARGB(255, 78, 47, 39),
+                  color: Color.fromARGB(255, 78, 47, 39),
                   fontFamily: 'Monser2',
                 ),
                 textAlign: TextAlign.center,
@@ -79,13 +79,13 @@ class AboutUsButton extends StatelessWidget {
             ElevatedButton(
               onPressed: onPressed,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 255, 139, 47),
+                backgroundColor: const Color.fromARGB(255, 255, 139, 47),
               ),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
                 child: Text(
                   buttonText,
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  style: const TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
             ),
@@ -97,10 +97,12 @@ class AboutUsButton extends StatelessWidget {
 }
 
 class DotButton extends StatelessWidget {
+  const DotButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Icon(
+      icon: const Icon(
         Icons.circle,
         color: Colors.white,
         size: 12,
@@ -166,19 +168,19 @@ class CourseInfo extends StatelessWidget {
               ),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 78, 47, 39),
+                  color: Color.fromARGB(255, 78, 47, 39),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(8, 8, 8, 24),
                 child: Text(
                   description,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
-                    color: const Color.fromARGB(255, 78, 47, 39),
+                    color: Color.fromARGB(255, 78, 47, 39),
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -188,9 +190,9 @@ class CourseInfo extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     secondText!,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
-                      color: const Color.fromARGB(255, 78, 47, 39),
+                      color: Color.fromARGB(255, 78, 47, 39),
                     ),
                     textAlign: TextAlign.center,
                   ),

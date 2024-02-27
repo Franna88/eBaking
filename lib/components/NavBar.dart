@@ -1,6 +1,6 @@
 import 'package:ebaking/AboutUs/AboutUS.dart';
 import 'package:ebaking/ApplyNow.dart';
-import 'package:ebaking/carreerPath/CareerPath.dart';
+import 'package:ebaking/CarreerPath/CareerPath.dart';
 import 'package:ebaking/ContactUs/ContactUs.dart';
 import 'package:ebaking/landingPage.dart';
 import 'package:flutter/material.dart';
@@ -26,17 +26,17 @@ class ContainerStyle extends StatefulWidget {
 class _ContainerStyleState extends State<ContainerStyle> {
   @override
   Widget build(BuildContext context) {
-    Color textColor = Color.fromARGB(255, 255, 136, 40);
+    Color textColor = const Color.fromARGB(255, 255, 136, 40);
     Color containerColor = Colors.white;
 
     if (widget.itemIndex == widget.routeValue) {
       setState(() {
         textColor = Colors.white;
-        containerColor = Color.fromARGB(255, 255, 136, 40);
+        containerColor = const Color.fromARGB(255, 255, 136, 40);
       });
     } else {
       setState(() {
-        textColor = Color.fromARGB(255, 255, 136, 40);
+        textColor = const Color.fromARGB(255, 255, 136, 40);
         containerColor = Colors.white;
       });
     }
@@ -128,7 +128,7 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
                           description: "Home",
                           itemIndex: widget.itemIndex,
                           routeValue: 0,
-                          route: LandingPage(),
+                          route: const LandingPage(),
                         )),
                     Padding(
                         padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -136,7 +136,7 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
                           description: "About",
                           itemIndex: widget.itemIndex,
                           routeValue: 1,
-                          route: AboutUs(),
+                          route: const AboutUs(),
                         )),
                     Padding(
                         padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -144,7 +144,7 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
                           description: "View Courses",
                           itemIndex: widget.itemIndex,
                           routeValue: 2,
-                          route: CareerPath(),
+                          route: const CareerPath(),
                         )),
                     Padding(
                         padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -152,7 +152,7 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
                           description: "Contact Us",
                           itemIndex: widget.itemIndex,
                           routeValue: 3,
-                          route: ContactUs(),
+                          route: const ContactUs(),
                         )),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -162,18 +162,18 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      Material(child: ApplyNow())));
+                                      const Material(child: ApplyNow())));
                         },
                         child: Container(
                           width: 150,
                           height: 65,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage("imges/applyBtn.png"),
                               fit: BoxFit.contain,
                             ),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               'Apply',
                               style: TextStyle(
@@ -190,13 +190,13 @@ class _ScrollNavBarState extends State<ScrollNavBar> {
                       child: Container(
                         width: 150,
                         height: 40,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage("imges/signInBtn.png"),
                             fit: BoxFit.contain,
                           ),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Sign In',
                             style: TextStyle(
@@ -227,16 +227,16 @@ class MobileNavBar extends StatelessWidget {
     var heightDevice = MediaQuery.of(context).size.height;
     var widthDevice = MediaQuery.of(context).size.width;
 
-    BuildContext? _dialogContext;
+    BuildContext? dialogContext;
     //Open mobile navbar dialog
     Future openMobileNavbarPopup() => showDialog(
         context: context,
         builder: (context) {
-          _dialogContext = context;
+          dialogContext = context;
           return Dialog(
               child: MobileNavbarPopup(
                   itemIndex: itemIndex,
-                  closeDialog: () => Navigator.pop(_dialogContext!)));
+                  closeDialog: () => Navigator.pop(dialogContext!)));
         });
 
     return Column(
@@ -248,20 +248,26 @@ class MobileNavBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                'imges/Logo.png',
-                height: 50,
-                width: 50,
-                fit: BoxFit.fill,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  'imges/Logo.png',
+                  height: 50,
+                  width: 50,
+                  fit: BoxFit.fill,
+                ),
               ),
-              GestureDetector(
-                onTap: () {
-                  openMobileNavbarPopup();
-                },
-                child: SizedBox(
-                  height: 40,
-                  width: 40,
-                  child: Image.asset('imges/icons8-menu-100.png'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    openMobileNavbarPopup();
+                  },
+                  child: SizedBox(
+                    height: 40,
+                    width: 40,
+                    child: Image.asset('imges/icons8-menu-100.png'),
+                  ),
                 ),
               ),
             ],
@@ -310,7 +316,7 @@ class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
                 description: "Home",
                 itemIndex: widget.itemIndex,
                 routeValue: 0,
-                route: LandingPage(),
+                route: const LandingPage(),
               )),
           Padding(
               padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -318,7 +324,7 @@ class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
                 description: "About",
                 itemIndex: widget.itemIndex,
                 routeValue: 1,
-                route: AboutUs(),
+                route: const AboutUs(),
               )),
           Padding(
               padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -326,7 +332,7 @@ class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
                 description: "View Courses",
                 itemIndex: widget.itemIndex,
                 routeValue: 2,
-                route: CareerPath(),
+                route: const CareerPath(),
               )),
           Padding(
               padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -334,7 +340,7 @@ class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
                 description: "Contact Us",
                 itemIndex: widget.itemIndex,
                 routeValue: 3,
-                route: ContactUs(),
+                route: const ContactUs(),
               )),
           Padding(
             padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
@@ -343,18 +349,19 @@ class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Material(child: ApplyNow())));
+                        builder: (context) =>
+                            const Material(child: ApplyNow())));
               },
               child: Container(
                 width: 150,
                 height: 65,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("imges/applyBtn.png"),
                     fit: BoxFit.contain,
                   ),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Apply',
                     style: TextStyle(
@@ -371,13 +378,13 @@ class _MobileNavbarPopupState extends State<MobileNavbarPopup> {
             child: Container(
               width: 150,
               height: 40,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("imges/signInBtn.png"),
                   fit: BoxFit.contain,
                 ),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Sign In',
                   style: TextStyle(

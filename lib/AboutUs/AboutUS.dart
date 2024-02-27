@@ -39,7 +39,7 @@ class _AboutUsState extends State<AboutUs> {
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           height: width < 600 ? height / 3 : height / 1.1,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.fill,
                               image: AssetImage("imges/about_us.png"),
@@ -61,7 +61,7 @@ class _AboutUsState extends State<AboutUs> {
                                   ? MyUtility(context).height / 9
                                   : MyUtility(context).height / 7,
                             ),
-                            Text(
+                            const Text(
                               'About Us',
                               style: TextStyle(
                                 fontSize: 32,
@@ -80,7 +80,7 @@ class _AboutUsState extends State<AboutUs> {
                               ),
                             ),
                             if (width >= 600)
-                              SizedBox(
+                              const SizedBox(
                                 height: 200,
                                 width: 900,
                                 child: Text(
@@ -99,13 +99,13 @@ class _AboutUsState extends State<AboutUs> {
                     ],
                   ),
                   if (width >= 600)
-                    Text(
+                    const Text(
                       'About Us',
                       style: TextStyle(
                           fontSize: 32,
                           fontFamily: 'Monser',
                           fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 78, 47, 39)),
+                          color: Color.fromARGB(255, 78, 47, 39)),
                     ),
                   if (width >= 600)
                     Padding(
@@ -149,7 +149,7 @@ class _AboutUsState extends State<AboutUs> {
                     ),
                   ),
                   if (width <= 600)
-                    CourseInfo(
+                    const CourseInfo(
                         imagePath: 'imges/info.svg',
                         title: '',
                         description:
@@ -158,8 +158,8 @@ class _AboutUsState extends State<AboutUs> {
               ),
             ),
           ),
-          if (width >= 600) ContactInfo(),
-          if (width <= 600) ContactInfoMobile()
+          if (width >= 600) const ContactInfo(),
+          if (width <= 600) const ContactInfoMobile()
         ],
       ),
     );

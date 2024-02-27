@@ -32,15 +32,15 @@ class MyTextField extends StatelessWidget {
               children: [
                 Text(
                   description!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 78, 47, 39),
+                    color: Color.fromARGB(255, 78, 47, 39),
                     fontFamily: 'Monser2',
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Text(
+                const Text(
                   "*",
                   style: TextStyle(
                     fontSize: 25,
@@ -53,25 +53,27 @@ class MyTextField extends StatelessWidget {
             ),
           ),
           Container(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               width: customSize,
               child: TextFormField(
                 maxLines: lines == null ? 1 : 5,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   filled: true,
-                  fillColor: Color.fromARGB(255, 217, 217, 217),
-                  focusColor: Color(0xFF9E9E9E),
+                  fillColor: const Color.fromARGB(255, 217, 217, 217),
+                  focusColor: const Color(0xFF9E9E9E),
                   hintText: hintText,
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     color: Colors.grey,
                     fontSize: 20,
                     fontFamily: 'Monser',
                   ),
                 ),
-                validator: (value) {},
+                validator: (value) {
+                  return null;
+                },
                 controller: controller,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF9E9E9E),
                   fontSize: 18,
                   fontWeight: FontWeight.w400,

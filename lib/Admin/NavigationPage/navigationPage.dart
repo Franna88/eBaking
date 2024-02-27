@@ -17,7 +17,7 @@ class _NavigationPAgeState extends State<NavigationPAge> {
   int pageIndex = 0;
   @override
   Widget build(BuildContext context) {
-    var pages = [Courses(), Students(), Quiz(), Profile()];
+    var pages = [const Courses(), const Students(), const Quiz(), const Profile()];
 
     changePage(index) {
       setState(() {
@@ -86,7 +86,7 @@ class _NavigationPAgeState extends State<NavigationPAge> {
                       pageIndex: pageIndex,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       changePage(3);
@@ -106,7 +106,7 @@ class _NavigationPAgeState extends State<NavigationPAge> {
                   ),
                 ]),
           ),
-          Container(
+          SizedBox(
               width: MyUtility(context).width - MyUtility(context).width / 5,
               height: MyUtility(context).height,
               child: Center(

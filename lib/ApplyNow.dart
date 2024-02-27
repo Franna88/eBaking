@@ -6,7 +6,6 @@ import 'package:ebaking/components/MyTextField.dart';
 import 'package:ebaking/components/NavBar.dart';
 import 'package:ebaking/components/ProgressBarStage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'components/MyUtil.dart';
 
@@ -47,7 +46,7 @@ class _ApplyNowState extends State<ApplyNow> {
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               height: width < 600 ? height / 3 : height / 1.1,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage("imges/E-baking.png"),
@@ -66,10 +65,10 @@ class _ApplyNowState extends State<ApplyNow> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 100,
                             ),
-                            Text(
+                            const Text(
                               'Apply Now',
                               style: TextStyle(
                                 fontFamily: 'Monser',
@@ -87,8 +86,8 @@ class _ApplyNowState extends State<ApplyNow> {
                                 color: Colors.white,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 20),
+                            const Padding(
+                              padding: EdgeInsets.only(bottom: 20),
                               child: Text(
                                 'Requirements',
                                 style: TextStyle(
@@ -101,7 +100,7 @@ class _ApplyNowState extends State<ApplyNow> {
                               ),
                             ),
                             if (width >= 600)
-                              SizedBox(
+                              const SizedBox(
                                 height: 300,
                                 width: 850,
                                 child: Text(
@@ -124,7 +123,7 @@ class _ApplyNowState extends State<ApplyNow> {
                   ),
                   Visibility(
                     visible: MyUtility(context).width <= 600,
-                    child: CourseInfo(
+                    child: const CourseInfo(
                         imagePath: 'imges/info.svg',
                         title: '',
                         description:
@@ -133,7 +132,7 @@ class _ApplyNowState extends State<ApplyNow> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Column(
+                      const Column(
                         children: [
                           ProgressBarStage(
                               imagePath: 'imges/normalCircle.png', number: 1),
@@ -142,7 +141,7 @@ class _ApplyNowState extends State<ApplyNow> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: const Color.fromARGB(255, 78, 47, 39),
+                              color: Color.fromARGB(255, 78, 47, 39),
                               fontFamily: 'Monser2',
                             ),
                           ),
@@ -151,9 +150,9 @@ class _ApplyNowState extends State<ApplyNow> {
                       Container(
                         height: 2,
                         width: MyUtility(context).width / 6,
-                        color: Color.fromARGB(255, 78, 47, 39),
+                        color: const Color.fromARGB(255, 78, 47, 39),
                       ),
-                      Column(
+                      const Column(
                         children: [
                           ProgressBarStage(
                               imagePath: 'imges/circleGradient.png', number: 2),
@@ -162,7 +161,7 @@ class _ApplyNowState extends State<ApplyNow> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: const Color.fromARGB(255, 78, 47, 39),
+                              color: Color.fromARGB(255, 78, 47, 39),
                               fontFamily: 'Monser2',
                             ),
                           ),
@@ -173,9 +172,9 @@ class _ApplyNowState extends State<ApplyNow> {
                       Container(
                         height: 2,
                         width: MyUtility(context).width / 6,
-                        color: Color.fromARGB(255, 78, 47, 39),
+                        color: const Color.fromARGB(255, 78, 47, 39),
                       ),
-                      Column(
+                      const Column(
                         children: [
                           ProgressBarStage(
                               imagePath: 'imges/normalCircle.png', number: 3),
@@ -184,7 +183,7 @@ class _ApplyNowState extends State<ApplyNow> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: const Color.fromARGB(255, 78, 47, 39),
+                              color: Color.fromARGB(255, 78, 47, 39),
                               fontFamily: 'Monser2',
                             ),
                           ),
@@ -250,7 +249,7 @@ class _ApplyNowState extends State<ApplyNow> {
                                     backgroundColor: Colors.orange,
                                     foregroundColor: Colors.white,
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     'Next',
                                     style: TextStyle(
                                       fontSize: 22,
@@ -316,7 +315,7 @@ class _ApplyNowState extends State<ApplyNow> {
                                 backgroundColor: Colors.orange,
                                 foregroundColor: Colors.white,
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Next',
                                 style: TextStyle(
                                   fontSize: 22,
@@ -339,8 +338,8 @@ class _ApplyNowState extends State<ApplyNow> {
               ),
             ),
           ),
-          if (width >= 600) ContactInfo(),
-          if (width <= 600) ContactInfoMobile()
+          if (width >= 600) const ContactInfo(),
+          if (width <= 600) const ContactInfoMobile()
         ],
       ),
     );

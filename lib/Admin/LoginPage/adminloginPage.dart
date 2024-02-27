@@ -19,19 +19,19 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        color: Color.fromARGB(255, 255, 223, 196),
+        color: const Color.fromARGB(255, 255, 223, 196),
         width: 450,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
+            const Row(
               children: [
                 Text(
                   "Please ",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 14, 25, 77),
+                    color: Color.fromARGB(255, 14, 25, 77),
                     fontFamily: "RegularMontserratBold",
                   ),
                   textAlign: TextAlign.center,
@@ -41,7 +41,7 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 225, 112, 93),
+                    color: Color.fromARGB(255, 225, 112, 93),
                     fontFamily: "RegularMontserratBold",
                   ),
                   textAlign: TextAlign.center,
@@ -51,7 +51,7 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 14, 25, 77),
+                    color: Color.fromARGB(255, 14, 25, 77),
                     fontFamily: "RegularMontserratBold",
                   ),
                   textAlign: TextAlign.center,
@@ -82,7 +82,7 @@ class _LoginFormState extends State<LoginForm> {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            Material(child: NavigationPAge())));
+                            const Material(child: NavigationPAge())));
               },
               child: Container(
                   width: 200,
@@ -92,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
                         image: AssetImage("imges/buttonStyle.png"),
                         fit: BoxFit.contain),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Login",
                       style: TextStyle(
@@ -134,7 +134,7 @@ class AdminLoginPage extends StatelessWidget {
           decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 223, 196),
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Center(child: LoginForm()),
+          child: const Center(child: LoginForm()),
         ),
         Positioned(
           bottom: MyUtility(context).height / 1.6,

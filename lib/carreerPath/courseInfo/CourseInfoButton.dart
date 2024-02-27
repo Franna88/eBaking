@@ -35,7 +35,7 @@ class CourseInfoButton extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontFamily: 'Monser',
                 fontWeight: FontWeight.bold,
@@ -47,7 +47,7 @@ class CourseInfoButton extends StatelessWidget {
             width: 250,
             child: Text(
               description,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
                 fontFamily: 'Monser2',
@@ -69,7 +69,7 @@ class CourseDot extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: onPressed,
-      icon: Stack(
+      icon: const Stack(
         children: [
           Icon(
             Icons.circle,
@@ -152,7 +152,7 @@ class _GradientButtonState extends State<GradientButton>
           child: Center(
             child: Text(
               widget.text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 14.0,
                 fontFamily: 'Monser2',
@@ -185,7 +185,7 @@ class ColorButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [startColor, endColor],
@@ -196,7 +196,7 @@ class ColorButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.bold,

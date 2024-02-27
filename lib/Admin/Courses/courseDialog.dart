@@ -24,7 +24,7 @@ class _CourseDialogState extends State<CourseDialog> {
               image: AssetImage("imges/dialogBackground.png"),
               fit: BoxFit.cover),
           borderRadius: BorderRadius.all(Radius.circular(10))),
-      child: Column(children: [
+      child: const Column(children: [
         Row(
           children: [
             Spacer(),

@@ -26,20 +26,21 @@ class CourseContainerStyle extends StatelessWidget {
             image: AssetImage(imageUrl),
             fit: BoxFit.cover,
           ),
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topRight: Radius.circular(50),
             bottomLeft: Radius.circular(50),
           ),
         ),
+        clipBehavior: Clip.antiAlias,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 description,
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                style: const TextStyle(color: Colors.white, fontSize: 25),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               IconButton(
                 onPressed: onPressed,
                 icon: SvgPicture.asset(" imges/icons8-forward-50.png",
@@ -48,7 +49,6 @@ class CourseContainerStyle extends StatelessWidget {
             ],
           ),
         ),
-        clipBehavior: Clip.antiAlias,
       ),
     );
   }

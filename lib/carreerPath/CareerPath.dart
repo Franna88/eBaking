@@ -1,7 +1,7 @@
-import 'package:ebaking/carreerPath/courseInfo/CourseInformation.dart';
+import 'package:ebaking/CarreerPath/courseInfo/CourseInformation.dart';
 import 'package:ebaking/AboutUs/AboutUsButton.dart';
-import 'package:ebaking/carreerPath/CareerpathButton.dart';
-import 'package:ebaking/carreerPath/CareerPathMobileSlider.dart';
+import 'package:ebaking/CarreerPath/CareerpathButton.dart';
+import 'package:ebaking/CarreerPath/CareerPathMobileSlider.dart';
 import 'package:ebaking/components/Footer/ContactInfo.dart';
 import 'package:ebaking/components/Footer/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
@@ -52,7 +52,7 @@ class _CareerPathState extends State<CareerPath> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
-    BuildContext? _dialogContext;
+    BuildContext? dialogContext;
 
     return SingleChildScrollView(
       child: Column(
@@ -72,7 +72,7 @@ class _CareerPathState extends State<CareerPath> {
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           height: width < 600 ? height / 3 : height / 1.1,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage("imges/CareerPathMain.jpg"),
@@ -92,10 +92,10 @@ class _CareerPathState extends State<CareerPath> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 50,
                             ),
-                            Text(
+                            const Text(
                               'Your Career starts here',
                               style: TextStyle(
                                 fontSize: 32,
@@ -110,7 +110,7 @@ class _CareerPathState extends State<CareerPath> {
                               height: 1.5,
                               color: Colors.white,
                             ),
-                            Text(
+                            const Text(
                               'Our Courses',
                               style: TextStyle(
                                 fontSize: 32,
@@ -129,7 +129,7 @@ class _CareerPathState extends State<CareerPath> {
                               ),
                             ),
                             if (width >= 600)
-                              SizedBox(
+                              const SizedBox(
                                 height: 300,
                                 width: 900,
                                 child: Text(
@@ -149,19 +149,19 @@ class _CareerPathState extends State<CareerPath> {
                   ),
                   Visibility(
                       visible: MyUtility(context).width < 600,
-                      child: CourseInfo(
+                      child: const CourseInfo(
                           imagePath: 'imges/info.svg',
                           title: '',
                           description:
                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ialiquip ex ea Excepteur sint occaecat cupidatat non pro deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eeserunt mollit anim id est laborum')),
                   if (MyUtility(context).width >= 600)
-                    Text(
+                    const Text(
                       'Learning with E - Baking',
                       style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Monser',
-                          color: const Color.fromARGB(255, 78, 47, 39)),
+                          color: Color.fromARGB(255, 78, 47, 39)),
                     ),
                   if (MyUtility(context).width >= 600)
                     Padding(
@@ -177,15 +177,15 @@ class _CareerPathState extends State<CareerPath> {
                       padding: const EdgeInsets.only(bottom: 20),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             'The Baking Industry: Part1',
                             style: TextStyle(
                                 fontSize: 26,
                                 fontFamily: 'Monser',
                                 fontWeight: FontWeight.w700,
-                                color: const Color.fromARGB(255, 78, 47, 39)),
+                                color: Color.fromARGB(255, 78, 47, 39)),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: SizedBox(
@@ -194,7 +194,7 @@ class _CareerPathState extends State<CareerPath> {
                                 decoration: InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white,
-                                  focusColor: Color(0xFF9E9E9E),
+                                  focusColor: const Color(0xFF9E9E9E),
                                   prefixIcon: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: SvgPicture.asset(
@@ -203,7 +203,7 @@ class _CareerPathState extends State<CareerPath> {
                                         height: 35),
                                   ),
                                   hintText: "Search here...",
-                                  hintStyle: TextStyle(
+                                  hintStyle: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 20,
                                   ),
@@ -219,7 +219,7 @@ class _CareerPathState extends State<CareerPath> {
                                 decoration: InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white,
-                                  focusColor: Color(0xFF9E9E9E),
+                                  focusColor: const Color(0xFF9E9E9E),
                                   prefixIcon: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: SvgPicture.asset(
@@ -228,7 +228,7 @@ class _CareerPathState extends State<CareerPath> {
                                         height: 35),
                                   ),
                                   hintText: "Categories",
-                                  hintStyle: TextStyle(
+                                  hintStyle: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 20,
                                   ),
@@ -293,12 +293,12 @@ class _CareerPathState extends State<CareerPath> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text(
+                          const Text(
                             'Learning with \nE - Baking',
                             style: TextStyle(
                                 fontSize: 32,
                                 fontWeight: FontWeight.bold,
-                                color: const Color.fromARGB(255, 78, 47, 39)),
+                                color: Color.fromARGB(255, 78, 47, 39)),
                             textAlign: TextAlign.center,
                           ),
                           Padding(
@@ -309,14 +309,14 @@ class _CareerPathState extends State<CareerPath> {
                               color: Colors.black,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 25),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 25),
                             child: Text(
                               'The Baking Industry: Part1',
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w700,
-                                  color: const Color.fromARGB(255, 78, 47, 39)),
+                                  color: Color.fromARGB(255, 78, 47, 39)),
                             ),
                           ),
                           Row(
@@ -330,16 +330,21 @@ class _CareerPathState extends State<CareerPath> {
                                     decoration: InputDecoration(
                                       filled: true,
                                       fillColor: Colors.white,
-                                      focusColor: Color(0xFF9E9E9E),
+                                      focusColor: const Color(0xFF9E9E9E),
                                       prefixIcon: Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: SvgPicture.asset(
-                                            "imges/magnifyingClass.svg",
-                                            width: 35,
-                                            height: 35),
+                                        child: Icon(
+                                          Icons.search,
+                                          size: 25,
+                                          color: Colors.black,
+                                        ),
+                                        // SvgPicture.asset(
+                                        //     "imges/magnifyingClass.svg",
+                                        //     width: 30,
+                                        //     height: 35),
                                       ),
                                       hintText: "Search here...",
-                                      hintStyle: TextStyle(
+                                      hintStyle: const TextStyle(
                                         color: Colors.grey,
                                         fontSize: 20,
                                       ),
@@ -355,7 +360,7 @@ class _CareerPathState extends State<CareerPath> {
                                     decoration: InputDecoration(
                                       filled: true,
                                       fillColor: Colors.white,
-                                      focusColor: Color(0xFF9E9E9E),
+                                      focusColor: const Color(0xFF9E9E9E),
                                       prefixIcon: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: SvgPicture.asset(
@@ -364,7 +369,7 @@ class _CareerPathState extends State<CareerPath> {
                                             height: 35),
                                       ),
                                       hintText: "Categories",
-                                      hintStyle: TextStyle(
+                                      hintStyle: const TextStyle(
                                         color: Colors.grey,
                                         fontSize: 20,
                                       ),
@@ -441,8 +446,10 @@ class _CareerPathState extends State<CareerPath> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Material(
-                                                child: CourseInformation())));
+                                            builder: (context) =>
+                                                const Material(
+                                                    child:
+                                                        CourseInformation())));
                                   }),
                               SizedBox(
                                 height: MyUtility(context).height / 13,
@@ -454,8 +461,10 @@ class _CareerPathState extends State<CareerPath> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Material(
-                                                child: CourseInformation())));
+                                            builder: (context) =>
+                                                const Material(
+                                                    child:
+                                                        CourseInformation())));
                                   }),
                             ],
                           ),
@@ -468,8 +477,10 @@ class _CareerPathState extends State<CareerPath> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Material(
-                                                child: CourseInformation())));
+                                            builder: (context) =>
+                                                const Material(
+                                                    child:
+                                                        CourseInformation())));
                                   }),
                               SizedBox(
                                 height: MyUtility(context).height / 13,
@@ -481,8 +492,10 @@ class _CareerPathState extends State<CareerPath> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Material(
-                                                child: CourseInformation())));
+                                            builder: (context) =>
+                                                const Material(
+                                                    child:
+                                                        CourseInformation())));
                                   }),
                             ],
                           ),
@@ -495,13 +508,15 @@ class _CareerPathState extends State<CareerPath> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Material(
-                                                child: CourseInformation())));
+                                            builder: (context) =>
+                                                const Material(
+                                                    child:
+                                                        CourseInformation())));
                                   }),
                               SizedBox(
                                 height: MyUtility(context).height / 13,
                               ),
-                              Container(
+                              SizedBox(
                                 width: MyUtility(context).width / 3.5,
                                 height: MyUtility(context).height / 3.0,
                               )
@@ -520,8 +535,8 @@ class _CareerPathState extends State<CareerPath> {
               ),
             ),
           ),
-          if (width >= 600) ContactInfo(),
-          if (width <= 600) ContactInfoMobile()
+          if (width >= 600) const ContactInfo(),
+          if (width <= 600) const ContactInfoMobile()
         ],
       ),
     );

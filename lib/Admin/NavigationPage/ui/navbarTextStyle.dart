@@ -32,11 +32,11 @@ class _NavbarTextStyleState extends State<NavbarTextStyle> {
             height: 35,
             colorFilter: ColorFilter.mode(
                 widget.pageIndex == widget.itemIndex
-                    ? Color.fromARGB(255, 233, 107, 70)
+                    ? const Color.fromARGB(255, 233, 107, 70)
                     : const Color.fromARGB(255, 138, 138, 138),
                 BlendMode.srcIn),
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           ),
           Text(
@@ -45,7 +45,7 @@ class _NavbarTextStyleState extends State<NavbarTextStyle> {
               fontSize: 22,
               fontWeight: FontWeight.bold,
               color: widget.pageIndex == widget.itemIndex
-                  ? Color.fromARGB(255, 233, 107, 70)
+                  ? const Color.fromARGB(255, 233, 107, 70)
                   : const Color.fromARGB(255, 138, 138, 138),
               fontFamily: "RegularMontserratBold",
             ),

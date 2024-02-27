@@ -28,23 +28,24 @@ class CareerButton extends StatelessWidget {
           image: AssetImage(imageUrl),
           fit: BoxFit.cover,
         ),
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topRight: Radius.circular(50),
           bottomLeft: Radius.circular(50),
         ),
       ),
+      clipBehavior: Clip.antiAlias,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 32,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             IconButton(
               onPressed: onPressed,
               icon: Image.asset(
@@ -56,7 +57,6 @@ class CareerButton extends StatelessWidget {
           ],
         ),
       ),
-      clipBehavior: Clip.antiAlias,
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ProgressBarStage extends StatelessWidget {
   final String imagePath;
@@ -24,7 +23,7 @@ class ProgressBarStage extends StatelessWidget {
           Container(
                           width: 75,
                           height: 75,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage("imges/imagePath.png"),
                               fit: BoxFit.contain,
@@ -35,7 +34,7 @@ class ProgressBarStage extends StatelessWidget {
           Center(
             child: Text(
               '$number',
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 32,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),

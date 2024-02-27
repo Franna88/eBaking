@@ -21,21 +21,21 @@ class _StudentsState extends State<Students> {
         children: [
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 340,
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                    focusColor: Color(0xFF9E9E9E),
+                    focusColor: const Color(0xFF9E9E9E),
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SvgPicture.asset("imges/magnifyingClass.svg",
                           width: 35, height: 35),
                     ),
                     hintText: "Search here...",
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       color: Colors.grey,
                       fontSize: 20,
                     ),
@@ -44,35 +44,35 @@ class _StudentsState extends State<Students> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Row(
             children: [
               SizedBox(
                 width: MyUtility(context).width / 4,
-                child: Text(
+                child: const Text(
                   "Student",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
               SizedBox(
                 width: MyUtility(context).width / 4,
-                child: Text(
+                child: const Text(
                   "Email",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
               SizedBox(
                 width: MyUtility(context).width / 4,
-                child: Text(
+                child: const Text(
                   "Modules Completed",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
             ],
           ),
-             StudentList(),
+             const StudentList(),
         ],
       ),
     );

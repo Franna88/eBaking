@@ -1,7 +1,7 @@
-import 'package:ebaking/carreerPath/courseInfo/CourseInfoDesktopSlider.dart';
-import 'package:ebaking/carreerPath/courseInfo/CourseInfoMobileSlider.dart';
+import 'package:ebaking/CarreerPath/courseInfo/CourseInfoDesktopSlider.dart';
+import 'package:ebaking/CarreerPath/courseInfo/CourseInfoMobileSlider.dart';
 import 'package:ebaking/AboutUs/AboutUsButton.dart';
-import 'package:ebaking/carreerPath/courseInfo/CourseInfoButton.dart';
+import 'package:ebaking/CarreerPath/courseInfo/CourseInfoButton.dart';
 import 'package:ebaking/components/Footer/ContactInfo.dart';
 import 'package:ebaking/components/Footer/ContactInfroMobile.dart';
 import 'package:ebaking/components/CustomShapePath/TriangleDownShape.dart';
@@ -79,7 +79,7 @@ class _CourseInformationState extends State<CourseInformation> {
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               height: width < 600 ? height / 3 : height / 1.1,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage("imges/flowersprinkle.jpg"),
@@ -98,10 +98,10 @@ class _CourseInformationState extends State<CourseInformation> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 100,
                             ),
-                            Text(
+                            const Text(
                               'Type of Bakery',
                               style: TextStyle(
                                 fontSize: 32,
@@ -119,8 +119,8 @@ class _CourseInformationState extends State<CourseInformation> {
                                 color: Colors.white,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 20),
+                            const Padding(
+                              padding: EdgeInsets.only(bottom: 20),
                               child: Text(
                                 'Description of Module:',
                                 style: TextStyle(
@@ -133,7 +133,7 @@ class _CourseInformationState extends State<CourseInformation> {
                               ),
                             ),
                             if (width >= 600)
-                              SizedBox(
+                              const SizedBox(
                                 height: 300,
                                 width: 850,
                                 child: Text(
@@ -153,7 +153,7 @@ class _CourseInformationState extends State<CourseInformation> {
                   ),
                   Visibility(
                     visible: MyUtility(context).width <= 600,
-                    child: CourseInfo(
+                    child: const CourseInfo(
                         imagePath: 'imges/info.svg',
                         title: '',
                         description:
@@ -166,14 +166,14 @@ class _CourseInformationState extends State<CourseInformation> {
                       child: Container(
                         width: 400,
                         height: 300,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 217, 217, 217),
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 217, 217, 217),
                         ),
                         child: Center(
                           child: Container(
                             width: 100,
                             height: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Colors.black,
                             ),
@@ -189,15 +189,15 @@ class _CourseInformationState extends State<CourseInformation> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(0, 16, 0, 16),
                     child: Text(
                       'What you will learn',
                       style: TextStyle(
                           fontSize: 28,
                           fontFamily: 'Monser',
                           fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 78, 47, 39)),
+                          color: Color.fromARGB(255, 78, 47, 39)),
                     ),
                   ),
                   /*Row(
@@ -228,7 +228,7 @@ class _CourseInformationState extends State<CourseInformation> {
                       child: CourseInfoMobileSlider(courselist: courselist)),
                   Visibility(
                     visible: MyUtility(context).width >= 600,
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CourseDot(),
@@ -245,8 +245,8 @@ class _CourseInformationState extends State<CourseInformation> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 20),
                             child: Text(
                               'Course Level:',
                               style: TextStyle(
@@ -265,7 +265,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                           255, 225, 145, 77),
                                       endColor: const Color.fromARGB(
                                           255, 225, 222, 89),
-                                      duration: Duration(seconds: 1),
+                                      duration: const Duration(seconds: 1),
                                       onPressed: () {}),
                                   GradientButton(
                                       text: 'Advanced',
@@ -273,7 +273,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                           255, 233, 107, 70),
                                       endColor: const Color.fromARGB(
                                           255, 233, 107, 70),
-                                      duration: Duration(seconds: 1),
+                                      duration: const Duration(seconds: 1),
                                       onPressed: () {}),
                                   GradientButton(
                                       text: 'Expert',
@@ -281,7 +281,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                           255, 233, 107, 70),
                                       endColor: const Color.fromARGB(
                                           255, 233, 107, 70),
-                                      duration: Duration(seconds: 1),
+                                      duration: const Duration(seconds: 1),
                                       onPressed: () {}),
                                 ],
                               ),
@@ -301,7 +301,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                             255, 225, 145, 77),
                                         endColor: const Color.fromARGB(
                                             255, 225, 222, 89),
-                                        duration: Duration(seconds: 1),
+                                        duration: const Duration(seconds: 1),
                                         onPressed: () {}),
                                   ),
                                   Padding(
@@ -312,7 +312,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                             255, 233, 107, 70),
                                         endColor: const Color.fromARGB(
                                             255, 233, 107, 70),
-                                        duration: Duration(seconds: 1),
+                                        duration: const Duration(seconds: 1),
                                         onPressed: () {}),
                                   ),
                                   GradientButton(
@@ -321,14 +321,14 @@ class _CourseInformationState extends State<CourseInformation> {
                                           255, 233, 107, 70),
                                       endColor: const Color.fromARGB(
                                           255, 233, 107, 70),
-                                      duration: Duration(seconds: 1),
+                                      duration: const Duration(seconds: 1),
                                       onPressed: () {}),
                                 ],
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 20),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 20),
                             child: Text(
                               'Duration of Course:',
                               style: TextStyle(
@@ -345,7 +345,7 @@ class _CourseInformationState extends State<CourseInformation> {
                                   height: 50,
                                   width: 50,
                                 ),
-                                SizedBox(width: 20),
+                                const SizedBox(width: 20),
                                 SvgPicture.asset(
                                   'imges/12 Hours.svg',
                                   height: 15,
@@ -359,7 +359,7 @@ class _CourseInformationState extends State<CourseInformation> {
                               startColor: Colors.yellow,
                               endColor: Colors.orange,
                               onPressed: () {}),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           )
                         ],
@@ -369,14 +369,14 @@ class _CourseInformationState extends State<CourseInformation> {
                         child: Container(
                           width: MyUtility(context).width / 4,
                           height: 250,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 217, 217, 217),
+                          decoration: const BoxDecoration(
+                            color: Color.fromARGB(255, 217, 217, 217),
                           ),
                           child: Center(
                             child: Container(
                               width: 100,
                               height: 100,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.black,
                               ),
@@ -397,8 +397,8 @@ class _CourseInformationState extends State<CourseInformation> {
               ),
             ),
           ),
-          if (width >= 600) ContactInfo(),
-          if (width <= 600) ContactInfoMobile()
+          if (width >= 600) const ContactInfo(),
+          if (width <= 600) const ContactInfoMobile()
         ],
       ),
     );

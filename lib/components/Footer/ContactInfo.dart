@@ -2,7 +2,9 @@ import 'package:ebaking/Admin/LoginPage/adminloginPage.dart';
 import 'package:flutter/material.dart';
 
 class ContactInfo extends StatelessWidget {
-  const ContactInfo({Key? key});
+  const ContactInfo({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +26,15 @@ class ContactInfo extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                Material(child: AdminLoginPage())));
+                                const Material(child: AdminLoginPage())));
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: 100,
                     height: 100,
                     child: Image.asset('imges/Logo.png'),
                   ),
                 ),
-                Text(
+                const Text(
                   'E-baking',
                   style: TextStyle(
                     color: Colors.white,
@@ -43,7 +45,7 @@ class ContactInfo extends StatelessWidget {
               ],
             ),
           ),
-          Column(
+          const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -77,7 +79,7 @@ class ContactInfo extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Follow Us',
                   style: TextStyle(
                     color: Colors.white,

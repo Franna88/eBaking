@@ -86,7 +86,7 @@ class _Page2State extends State<Page2> {
                   ? heightDevice / 1.4
                   : heightDevice,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("imges/flowerdough.jpg"),
                   fit: BoxFit.cover,
@@ -96,7 +96,7 @@ class _Page2State extends State<Page2> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'We really love what we do',
                     style: TextStyle(
                         fontSize: 18,
@@ -104,8 +104,8 @@ class _Page2State extends State<Page2> {
                         fontWeight: FontWeight.w100,
                         color: Colors.white),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 16, 8, 32),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(8, 16, 8, 32),
                     child: Text(
                       'A symphony of flavors, crafted with love and precision',
                       style: TextStyle(
@@ -124,8 +124,8 @@ class _Page2State extends State<Page2> {
                         backgroundColor:
                             const Color.fromARGB(255, 255, 139, 47),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(6.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(6.0),
                         child: Text(
                           'About Us',
                           style: TextStyle(
@@ -140,8 +140,8 @@ class _Page2State extends State<Page2> {
               ),
             ),
           ),
-          if (MediaQuery.of(context).size.width >= 600) ContactInfo(),
-          if (MediaQuery.of(context).size.width <= 600) ContactInfoMobile()
+          if (MediaQuery.of(context).size.width >= 600) const ContactInfo(),
+          if (MediaQuery.of(context).size.width <= 600) const ContactInfoMobile()
         ],
       ),
     );

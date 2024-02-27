@@ -21,7 +21,7 @@ class _QuizListState extends State<QuizList> {
           children: [
             SizedBox(
               width: MyUtility(context).width / 4,
-              child: Text(
+              child: const Text(
                 "Quizes",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
@@ -45,10 +45,10 @@ class _QuizListState extends State<QuizList> {
                     width: MyUtility(context).width / 4,
                     child: Text(
                       quizData[i]['quizTitle']!,
-                      style: TextStyle(color: Colors.black, fontSize: 20),
+                      style: const TextStyle(color: Colors.black, fontSize: 20),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   SizedBox(
                     width: MyUtility(context).width / 13,
                     child: Container(
@@ -58,7 +58,7 @@ class _QuizListState extends State<QuizList> {
                             color: Color.fromARGB(255, 255, 115, 0),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "View",
                             style: TextStyle(
@@ -68,7 +68,7 @@ class _QuizListState extends State<QuizList> {
                           ),
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                 ],

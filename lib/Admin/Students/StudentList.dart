@@ -37,24 +37,24 @@ class _StudentListState extends State<StudentList> {
                   width: MyUtility(context).width / 4,
                   child: Text(
                    studentData[i]['student']!,
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: const TextStyle(color: Colors.black, fontSize: 20),
                   ),
                 ),
                 SizedBox(
                   width: MyUtility(context).width / 4,
                   child: Text(
                     studentData[i]['email']!,
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: const TextStyle(color: Colors.black, fontSize: 20),
                   ),
                 ),
                 SizedBox(
                   width: MyUtility(context).width / 8,
                   child: Text(
                     studentData[i]['coursesCompleted']!,
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: const TextStyle(color: Colors.black, fontSize: 20),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 SizedBox(
                   width: MyUtility(context).width / 13,
                   child: Container(
@@ -63,7 +63,7 @@ class _StudentListState extends State<StudentList> {
                       decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 255, 115, 0),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "View",
                           style: TextStyle(
@@ -73,7 +73,7 @@ class _StudentListState extends State<StudentList> {
                         ),
                       )),
                 ),
-                SizedBox(width: 15,),
+                const SizedBox(width: 15,),
               ],
             ),
             ),
